@@ -1,0 +1,62 @@
+<template name='indexCon'>
+	<view class='swiper-box'>
+		<swiper autoplay="true" interval="3000" duration="500" bindchange="swiperChange">
+			<block wx:for="{{indexSwiper}}" wx:for-item="seiperItrm" wx:key="index">
+				<swiper-item>
+					<image src="{{seiperItrm}}" class="slide-image" />
+					<view class='swiper-item-refer'>鹤壁市将建成而非求高人请如果如果企鹅窝如果如果</view>
+				</swiper-item>
+			</block>
+		</swiper>
+		<view class="dots">
+			<block wx:for="{{indexSwiper}}" wx:key="index" data-is="swiperCurrent">
+				<view class="dot{{index == current ? ' active' : ''}}"></view>
+			</block>
+		</view>
+	</view>
+	<view class="m-list-con" catchtap="tapArticleItem">
+		<view class="m-list-item ">
+			<view class="m-list-item-title">
+				新理念 新产业 新机遇————鹤壁东区发展规划实绩多大的
+			</view>
+			<view class="m-list-item-detail to-flex">
+				<view class="m-list-item-detail-left"><text>龙港之星</text> | <text>2019-12-21</text> <text>15:23</text></view>
+				<view class="m-list-item-detail-right">
+					<image src="/static/images/img/bofang.png" alt="" catchtap='tapMusic'/> 播放 </view>
+			</view>
+		</view>
+	</view>
+	<view class="m-list-con" catchtap="tapArticleItem">
+		<view class="m-list-item ">
+			<view class="m-list-item-title">
+				新理念 新产业 新机遇————鹤壁东区发展规划实绩多大的
+			</view>
+			<view class="m-list-item-title-image to-flex">
+				<image src="/static/images/img/img7.png" alt="" />
+				<image src="/static/images/img/img7.png" alt="" />
+				<image src="/static/images/img/img7.png" alt="" />
+			</view>
+			<view class="m-list-item-detail to-flex">
+				<view class="m-list-item-detail-left"><text>龙港之星</text> | <text>2019-12-21</text> <text>15:23</text></view>
+				<view class="m-list-item-detail-right">
+					<image src="/static/images/img/bofang.png" alt="" /> 播放 </view>
+			</view>
+		</view>
+	</view>
+	<view class="b-list-con" catchtap="tapArticleItem">
+		<view class="b-list-item">
+			<view class="b-list-item-titile to-flex">
+				<view class="b-list-item-titile-left">第十一届中国鹤壁民俗文化节</view>
+				<view class="b-list-item-titile-right">
+					<navigator openType="navigate" url="#">更多 ></navigator>
+				</view>
+			</view>
+			<view class="b-list-item-img">
+				<navigator openType="navigate" url="#">
+					<image src="/static/images/img/img3.png" alt=""></image>
+				</navigator>
+			</view>
+		</view>
+
+	</view>
+</template>

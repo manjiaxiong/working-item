@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<title>index.html</title>
+	<link rel="stylesheet" href="../../common/foxui.min.css">
+	<link rel="stylesheet" href="index.css">
+</head>
+<body>
+	<div class="big">
+		<div class="top">
+			<a href="#"><img src="../../images/First/err.png" alt="" class="top-err"></a>
+			<a href="#" class="go-regist">立即注册 ></a>
+			<img src="../../images/First/1.png" alt="" class="top-middle">
+	
+		</div>
+		<div class="middle">
+			<div class="middle-top">
+				<span>注册</span>
+			</div>
+			<div class="input-top">
+				<input type="text" placeholder="+86v  请输入手机号">
+				
+			</div>
+			<div class="input-bottom">
+				<input type="text" placeholder="请输入您收到的验证码">
+				<span class="require">获取验证码</span>
+				<!-- <span class="time">1111</span> -->
+			</div>
+			<p class="mess">未注册的手机将自动注册为花田账号</p>
+			<div class="login">
+				注册
+			</div>
+		</div>
+		<div class="bottom">
+			<img src="../../images/First/3.png" alt="">
+			<img src="../../images/First/4.png" alt="">
+			<img src="../../images/First/5.png" alt="">
+		</div>
+		<div class="fixed">
+			<div class="deal"><p>登录/注册代表已同意<a href="javascript:;">《花雨田用户协议》</a> <a href="javascript:;">《隐私政策》</a></p></div>
+			
+			<ul class="fixed-nav">
+				<li>
+					<img src="../../images/First/20.png" alt="">
+				</li>
+				<li>
+					<img src="../../images/First/22.png" alt="">
+				</li>
+				<li>
+					<img src="../../images/First/19.png" alt="" class="fixed-nav-add">
+				</li>
+				<li>
+					<img src="../../images/First/26.png" alt="">
+				</li>
+				<li>
+					<img src="../../images/First/25.png" alt="">
+				</li>
+			</ul>
+		</div>
+	</div>
+</body>
+<script src="../../lab/js/jquery-1.12.4.js"></script>
+<script>
+	$(function(){
+		//倒计时
+		var oRequire=document.querySelector('.require');
+		var isRequest=false;
+		function request(){
+			if(isRequest){
+				oRequire.onclick=false;
+			}
+			var preDate=Date.now();
+			var endDate=preDate+60000;
+			// console.log(preDate)
+			// console.log(endDate)
+			oRequire.onclick=null;
+			function contTime(){
+
+				var allMinSec=(endDate -Date.now())/1000;
+				if(allMinSec<=0){
+					allMinSec=0;
+				}
+				var isec=parseInt(allMinSec%3600%60);
+
+				oRequire.innerHTML=isec+"S";
+				if(isec==0){
+					clearTimeout(timer)
+					oRequire.innerHTML="重新获取";
+					oRequire.onclick=request
+				}
+				// console.log(1)
+			}
+			
+			timer=setInterval(contTime,1000);
+		}
+		oRequire.onclick=request;
+
+			});
+</script>
+</html>

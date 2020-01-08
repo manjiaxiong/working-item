@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<title>index.html</title>
+	<link rel="stylesheet" href="../../common/foxui.min.css">
+	<link rel="stylesheet" href="index.css">
+	<link rel="stylesheet" href="../../lab/font_cgwlcf33h87/iconfont.css">
+	<link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.css">  
+	
+</head>
+<body>
+	<div class="container">
+		<div class="header">
+			<div class="header-nav">
+				<span class="iconfont">&#xe604;</span>
+				<h2>城市列表</h2>
+			</div>
+			<div class="header-search">
+				<div class="header-search-con">
+					<input type="text" class="header-search-input">
+					<span class="iconfont">&#xeafe;</span>
+					<span class="header-search-title">输入城市名查询</span>
+				</div>
+			</div>
+			<div class="now-city">
+				<p>当前定位城市: <span class="iconfont">&#xe847;</span><span class="cheched-city">郑州</span></p>
+			</div>
+		</div>
+	</div>
+	<div class="city">
+			<div class="city-nav-list">
+				<ul>
+					<li>
+						最近访问
+					</li>
+					<li>
+						热门城市
+					</li>
+					<li>全部城市</li>
+					<li>北京</li>
+					<li>上海</li>
+					<li>天津</li>
+					<li>重庆</li>
+					<li>广东</li>
+					<li>浙江</li>
+					<li>江苏</li>
+					<li class="city-nav-list-now">河南</li>
+					<li>湖北</li>
+					<li>湖南</li>
+				</ul>
+			</div>
+			<div class="city-list-con">
+				<ul>
+					<li>
+						河南省
+					</li>
+					<li class="city-list-con-now">郑州市</li>
+					<li>开封市</li>
+					<li>洛阳市</li>
+					<li>平顶山市</li>
+					<li>安阳市</li>
+					<li>商丘市</li>
+					<li>信阳市</li>
+					<li>鹤壁市</li>
+					<li>焦作市</li>
+					<li>新乡市</li>
+					<li>濮阳市</li>
+					<li>许昌市</li>
+					<li>漯河市</li>
+					<li>三门峡市</li>
+					<li>南阳市</li>
+					<li>周口市</li>
+					<li>驻马店市</li>
+					<li>济源市</li>
+					
+				</ul>
+			</div>
+		</div>
+</body>
+<script src="../../lab/js/jquery-1.12.4.js"></script>
+<script>
+	//搜索框
+	var oInput=document.querySelector('.header-search-input')
+	var oHotAd=document.querySelector('.header-search-title')
+	console.log(oInput)
+	oInput.onfocus=function(ev){
+		$(oHotAd).hide()
+	}
+	oInput.onblur=function(ev){
+		$(oHotAd).show()
+	}
+	//选项卡封装
+	function TabControl (iTems,iClass){
+		$.each(iTems,function(index,value){
+			for(let i=0;i<iTems.length;i++){
+				iTems[i].onclick=function(ev){
+					console.log(1)
+					ev.stopPropagation()
+					for(var j=0;j<iTems.length;j++){
+						$(iTems[j]).removeClass(iClass)
+					}
+					$(this).addClass(iClass)
+				}
+			}
+		})
+	}
+	// console.log($('.city-nav-list li'))
+	TabControl($('.city-nav-list li'),'city-nav-list-now');
+	TabControl($('.city-list-con li'),'city-list-con-now')
+</script>
+</html>

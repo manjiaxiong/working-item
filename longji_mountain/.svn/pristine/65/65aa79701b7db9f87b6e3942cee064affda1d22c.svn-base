@@ -1,0 +1,113 @@
+/*轮播图样式开始*/
+swiper image{
+	width: 100%;
+	height: 300rpx;
+}
+.swiper-item{
+	position:relative;
+}
+.swiper-item-refer{
+	padding:10rpx 40rpx;
+	background:#000 ;
+	opacity:.6;
+	font-size:28rpx;
+	color:#fff;
+	text-overflow:ellipsis;
+	overflow:hidden;
+	white-space:nowrap;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	z-index: 999;
+}
+.dots{ 
+  /* position: absolute; */
+  /* left: 0; */
+  /* right: 0; */
+  /* bottom: 20rpx; */
+  margin: 20rpx;
+  display: flex; 
+  justify-content: center; 
+} 
+.dots .dot{ 
+  margin: 0 8rpx; 
+  width: 20rpx; 
+  height: 6rpx; 
+  background: #e4e4e4; 
+  border-radius: 3rpx; 
+  transition: all .6s; 
+} 
+.dots .dot.active{ 
+  width: 24rpx; 
+  background: #49bfcd; 
+}
+/*小列表样式开始*/
+.m-list-item{
+	padding: 24rpx 5%;
+	border-bottom: 1rpx solid #f5f5f5;
+}
+.m-list-item .m-list-item-title{
+	font-size: 30rpx;
+	text-overflow: -o-ellipsis-lastline;
+	  overflow: hidden;
+	  text-overflow: ellipsis;
+	  display: -webkit-box;
+	  -webkit-line-clamp: 2;
+	  line-clamp: 2;
+	  -webkit-box-orient: vertical;
+}
+.m-list-item .m-list-item-detail{
+	color: #939393;
+	font-size: 24rpx;
+	margin-top: 12rpx;
+}
+.m-list-item .m-list-item-detail .m-list-item-detail-right{
+	color: #40b9c4;
+	font-size: 27rpx;
+}
+.m-list-item-detail-right image{
+	height: 28rpx;
+	width: 30rpx;
+	vertical-align: middle;
+}
+.m-list-item-title-image{
+	margin-top: 12rpx;
+}
+.m-list-item-title-image image{
+	width: 32.5%;
+	border-radius: 10rpx;
+	height: 150rpx;
+	
+}
+/*大列表样式开始*/
+.b-list-item{
+	padding: 24rpx 5%;
+	border-bottom: 1rpx solid #f5f5f5;
+}
+.b-list-item .b-list-item-titile{
+	height: 36rpx;
+	line-height: 36rpx;
+}
+.b-list-item .b-list-item-titile-left{
+	padding-left: 15rpx;
+	border-left: 4rpx solid #48b9c7;
+	font-size: 32rpx;
+	font-weight: bolder;
+	width: 80%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.b-list-item .b-list-item-titile-right{
+	color: #6f6f6f;
+	font-size: 28rpx;
+}
+.b-list-item-img{
+	margin-top: 20rpx;
+}
+.b-list-item-img image{
+	width: 100%;
+	border-radius: 12rpx;
+	margin-top: 10rpx;
+	height: 450rpx;
+}

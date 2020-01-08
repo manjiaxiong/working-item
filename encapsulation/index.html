@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<form action="">
+		<input type="text" id="123" name="1141">
+		<input type="text" id="121" name="1141">
+		<input type="text" id="128" name="1141">
+		<input type="text" id="12d" name="1141">
+		<div>提交</div>
+	</form>
+</body>
+<script src="js/jquery-1.12.4.js"></script>
+<script>
+	$('div').click(function(ev){
+		// ev.stopPopagation()
+		// console.log(1)
+		console.log($('form').serializeArray())
+	})
+
+</script>
+</html>

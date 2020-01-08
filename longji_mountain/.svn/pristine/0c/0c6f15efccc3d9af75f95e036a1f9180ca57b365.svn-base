@@ -1,0 +1,22 @@
+/* pages/refer/detail/detail.wxss */
+.to-flex{
+	display: flex;
+	justify-content: space-between;
+}
+.w90{
+	width: 90%;
+	margin-left: 5%;
+}
+.p90{
+	padding: 0 5%;
+}
+.detail-titile{
+	font-size: 32rpx;
+	text-align: center;
+	font-weight: bolder;
+}
+.detail-time{
+	font-size: 24rpx;
+	color: #d0d0d0;
+	text-align: center;
+}

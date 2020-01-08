@@ -1,0 +1,74 @@
+.serve-con{
+	background-color: #f6f6f6;
+	overflow: hidden;
+	padding-bottom: 20rpx;
+}
+.serve-item{
+	background-color: #fff;
+	border-radius: 10rpx;
+	padding: 30rpx 15rpx;
+	margin-top: 35rpx;
+	overflow: hidden;
+	box-shadow:0px 0px  10px 0px #ccc;
+	box-sizing: border-box;
+}
+.serve-item-top{
+	overflow: hidden;
+}
+.serve-item-top-left{
+	width: 18%;
+	float: left;
+	border-radius: 50%;
+	overflow: hidden;
+	margin-right:35rpx;
+}
+.serve-item-top-left image{
+	width: 100%;
+	height: 122rpx;
+}
+.serve-item-top-right{
+	font-size: 34rpx;
+	color: #787878;
+}
+.serve-item-top-right .serve-name{
+	color: #000;
+	font-weight: bolder;
+}
+.serve-item-top-right .serve-time{
+	font-size: 24rpx;
+}
+.serve-item-top-right-top-bottom{
+	margin-top: 20rpx;
+}
+.serve-item-top-right-top-bottom image{
+	width: 40rpx;
+	height: 20rpx;
+	vertical-align: bottom;
+	margin-top: 15rpx;
+}
+.serve-item-bottom{
+	margin-top: 40rpx;
+	padding-left: 35rpx;
+	font-size: 28rpx;
+	color: #7b7b7a;
+}
+.serve-item-bottom view{
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.serve-item-bottom .serve-item-bottom-item image{
+	width: 40rpx;
+	height: 20rpx;
+	vertical-align: bottom;
+	margin-top:15rpx;
+}
+
+.exam-body {
+  transition: height 0s;
+  height: 96rpx;
+}
+ 
+.hidden {
+  height: 0;
+}

@@ -1,0 +1,91 @@
+/* pages/refer/index.wxss */
+/*引入css*/
+@import "./template/index/index.wxss"
+@import "./template/fencai/index.wxss"
+@import "./template/notice/index.wxss"
+@import "./template/serve/index.wxss"
+/*
+	共通属性
+*/
+.to-flex{
+	display: flex;
+	justify-content: space-between;
+}
+.w90{
+	width: 90%;
+	margin-left: 5%;
+}
+.p90{
+	padding: 0 5%;
+}
+.top-nav {
+	height: 84rpx;
+	line-height: 80rpx;
+}
+.top-nav .top-nav-item{
+	color: #595959;
+	font-size: 30rpx;
+}
+
+
+.container{
+	margin-top: ;
+	margin-top: 94rpx;
+}
+/*顶部导航*/
+.navbar{
+  display: flex;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 500;
+  width: 100%;
+  height: 50px;
+  /* flex-direction: row; */
+  text-align: right;
+  color: #656565;
+  font-size: 30rpx;
+  /* margin-left: 5%; */
+  box-sizing: border-box;
+  background-color: #FFF;
+  display: flex;
+  justify-content: space-between;
+}
+.navbar-item{
+  flex: 1;
+  padding: 26rpx 0px;
+  position: relative;
+  text-align: center;
+  margin-left: -54rpx;
+}
+.navbar-item-active{
+  /* transition: all 0.3s;
+  border-bottom: 10rpx solid #49bdcc; */
+  color: #49bdcc;
+}
+.navbar-item-active:after{
+	position: absolute;
+	content: '';
+	top: 80rpx;
+	width: 50rpx;
+	height: 4rpx;
+	left: 50%;
+	margin-left: -25rpx;
+	background-color: #49bdcc;
+}
+/*音频控件样式*/
+.audio-close{
+	position: fixed;
+	left: 0;
+	top: 50%;
+	width: 60rpx;
+	height: 110rpx;
+	border-top-right-radius: 10rpx;
+	border-bottom-right-radius: 10rpx;
+	margin-top: -55rpx  ;
+	line-height: 110rpx;
+	color: #e0e0e0;
+	text-align: center;
+	font-size: 32rpx;
+	background:linear-gradient(to right,#343434,#535353);
+}

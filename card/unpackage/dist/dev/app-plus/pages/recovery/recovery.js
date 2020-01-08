@@ -1,0 +1,2 @@
+setCssToHead([".",[1],"text { font-size: ",[0,44],"; padding: ",[0,40]," 0; }\n.",[1],"middle { -webkit-box-align: stretch; -webkit-align-items: stretch; -ms-flex-align: stretch; align-items: stretch; }\n",],undefined,{path:"./pages/recovery/recovery.wxss"})();
+document.dispatchEvent(new CustomEvent("generateFuncReady", { detail: { generateFunc: $gwx('./pages/recovery/recovery.wxml') } }));

@@ -1,0 +1,13 @@
+<template name="noticeCon">
+	<view class="m-list-con">
+		<view class="m-list-item "  catchtap="tapArticleItem">
+			<view class="m-list-item-title">
+				<text class="m-list-item-title-green">人文小镇 ｜ </text>龙脊山产业产业振兴示范带项目建设纪实
+			</view>
+			<view class="m-list-item-detail to-flex">
+				<view class="m-list-item-detail-left"><text>龙港之星</text> | <text>2019-12-21</text> <text>15:23</text></view>
+				<view class="m-list-item-detail-right"> <image src="http://app.uhuoduo.com/attachment/app/bofang.png" alt="" />  播放 </view>
+			</view>
+		</view>
+	</view>
+</template>

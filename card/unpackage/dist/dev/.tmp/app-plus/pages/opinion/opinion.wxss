@@ -1,0 +1,32 @@
+
+.all {
+	width: 100%;
+}
+.top {
+	-webkit-box-align: stretch;
+	-webkit-align-items: stretch;
+	    -ms-flex-align: stretch;
+	        align-items: stretch;
+	padding-left: 40rpx;
+	width: 100%;
+}
+.top input {
+	width: 300rpx;
+	height: 80rpx;
+	border-radius: 20rpx;
+	padding-left: 20rpx;
+	margin: 10rpx 0;
+	/* border: 1px red solid; */
+}
+.tail {
+	width: 70%;
+	height: 100rpx;
+	line-height: 100rpx;
+	background-color: #007AFF;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	margin-top: 180rpx;
+}
+

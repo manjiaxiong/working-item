@@ -1,0 +1,47 @@
+<!--pages/member/team/detail/index.wxml-->
+<view class="content">
+	<view class="content-title">
+		预约信息：
+	</view>
+	<view class="content-item-list">
+		<view class="content-item">
+			人数：{{content.sumpeople}}
+		</view>
+		<view class="content-item">
+			时间：{{content.begintime}}
+		</view>
+		<view class="content-item">
+			商家：{{content.merch}}
+		</view>
+		<view class="content-item" wx:if="{{content.type==1}}">
+			房间数：{{content.content}}
+		</view>
+		<view class="content-item"  wx:if="{{content.type==2}}">
+			菜品：{{content.content}}
+		</view>
+		<view class="content-item">
+			联系人：{{content.user}}
+		</view>
+		<view class="content-item">
+			联系电话：{{content.user}}
+		</view>
+	</view>
+	<view class="content-title">
+		预约进度：
+	</view>
+	<view class="content-item">
+		<view class="container-item-title-right" wx:if="{{content.status=='0'}}">状态：<text style="color: green;">预约中</text></view>
+		<view class="container-item-title-right" wx:if="{{content.status=='1'}}">状态：<text style="color: #49bdcc;">成功</text></view>
+		<view class="container-item-title-right" wx:if="{{content.status=='2'}}">状态：<text style="color: red;">失败</text></view>
+		<view class="container-item-title-right" wx:if="{{content.status=='-1'}}">状态：<text >取消</text></view>
+	</view>
+	<view class="content-title">
+		备注信息：
+	</view>
+	<view class="content-item" wx:if="{{content.remark==null}}">
+		预约已通过
+	</view>
+	<view class="content-item" wx:else>
+		{{content.remark}}
+	</view>
+</view>

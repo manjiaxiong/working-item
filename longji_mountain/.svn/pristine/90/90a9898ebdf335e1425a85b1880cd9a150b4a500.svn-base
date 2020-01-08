@@ -1,0 +1,19 @@
+ <import src="./template/homestay/index.wxml"/>
+ <import src="./template/catering/index.wxml"/>
+<view class="content">
+	<view class="header-bar">
+		<block wx:for="{{headerBar}}" wx:key="index" >
+			<view class="{{navbarActiveIndex === index ? 'navbar-item-active' : ''}}" data-navbar-index="{{index}}" catchtap="onNavBarTap">{{item}}</view>
+		</block>
+	</view>
+	<view class="content-con" >
+		<view wx:if="{{isNull==true}}" style="text-align: center;margin-top: 300rpx;font-size: 34rpx;">
+			您还没有任何需要支付的订单哦~~~~~
+		</view>
+		<view wx:if="{{isNull==false}}">
+			<template wx:if="{{navbarActiveIndex===0}}" is="homeCon" data="{{homestay}}" gosubmit="gosubmit"></template>
+			<template wx:if="{{navbarActiveIndex===1}}" is="caterCon" data="{{catering}}" gosubmit="gosubmit"></template>
+		</view>
+		
+	</view>
+</view>

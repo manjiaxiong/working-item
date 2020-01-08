@@ -1,0 +1,40 @@
+<view class="top-nav to-flex w90">
+<text class='icon icon-search'></text>
+  <input placeholder='输入关键字' style='width=80%'  confirm-type='search' value="{{inputValue}}" bindinput='inputBind'></input>
+  <text style='display="inline-block;width=20%' bindtap='query'>搜索</text>
+</view>
+<view class='content p90'>
+  <view class='content-item to-flex'  wx:for="{{list}}">
+    <view class='item-left'>
+      <image src='{{item.agentavatar}}'></image>
+    </view>
+    <view class='item-right'>
+      <view class='name'>{{item.nickname}}</view>
+      <view class='level'>等级：{{item.levelname}}</view>
+      <view class='phonei'>{{item.mobile}}</view>
+      <view class='money to-flex'><text class='jifen'>积分：{{item.credit1}}</text><text class='yue'>余额：{{item.credit2}}</text></view>
+    </view>
+  </view>
+  <!-- <view class='content-item to-flex'>
+    <view class='item-left'>
+      <image src='http://thirdwx.qlogo.cn/mmopen/c0FUjuYu0gkx78DlvAwQ0HSgl8sBVUicC3ZZjuibcG4V9G0d5LJfvjg5vSkCxQASwibsPofB9Ku3SL3Dt2pRvVLcC8tjib4camGT/132'></image>
+    </view>
+    <view class='item-right'>
+      <view class='name'>熊家满</view>
+      <view class='level'>等级：普通会员</view>
+      <view class='phonei'>11111111111111111</view>
+      <view class='money to-flex'><text class='jifen'>积分：0.00</text><text class='yue'>余额：0.00</text></view>
+    </view>
+  </view> -->
+  <!-- <view class='content-item to-flex'>
+    <view class='item-left'>
+      <image src='http://thirdwx.qlogo.cn/mmopen/c0FUjuYu0gkx78DlvAwQ0HSgl8sBVUicC3ZZjuibcG4V9G0d5LJfvjg5vSkCxQASwibsPofB9Ku3SL3Dt2pRvVLcC8tjib4camGT/132'></image>
+    </view>
+    <view class='item-right'>
+      <view class='name'>熊家满</view>
+      <view class='level'>等级：普通会员</view>
+      <view class='phonei'>11111111111111111</view>
+      <view class='money to-flex'><text class='jifen'>积分：0.00</text><text class='yue'>余额：0.00</text></view>
+    </view>
+  </view> -->
+</view>

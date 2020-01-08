@@ -1,0 +1,52 @@
+<!--pages/member/team/index.wxml-->
+<view class="container">
+	<view  wx:if="{{isNull==true}}" style="margin-top: 500rpx;text-align: center;font-size: 36rpx;">
+		您暂时没有预约订单哦~~~~
+	</view>
+	<block wx:for="{{list}}" wx:key="index">
+		<view class="container-item">
+			<view class="container-item-title to-flex">
+				<view class="container-item-title-left">创建时间：{{item.createtime}}</view>
+				<view class="container-item-title-right" wx:if="{{item.status=='0'}}">状态：<text style="color: green;">预约中</text></view>
+				<view class="container-item-title-right" wx:if="{{item.status=='1'}}">状态：<text style="color: #49bdcc;">成功</text></view>
+				<view class="container-item-title-right" wx:if="{{item.status=='2'}}">状态：<text style="color: red;">失败</text></view>
+				<view class="container-item-title-right" wx:if="{{item.status=='-1'}}">状态：<text >取消</text></view>
+			</view>
+			<view wx:if="{{item.status=='2'}}" style="text-align: center;padding: 20rpx 0;color: red;">{{item.remark}}</view>
+			<view class="container-item-con">
+				<view class="container-item-con-item container-item-con-item-left">
+					商家：{{item.merch}}
+				</view>
+				<view class="container-item-con-item container-item-con-item-right" wx:if="{{item.type=='1'}}">
+					类型：民宿
+				</view>
+				<view class="container-item-con-item container-item-con-item-right" wx:if="{{item.type=='2'}}">
+					类型：餐饮
+				</view>
+				<view class="container-item-con-item container-item-con-item-left">
+					人数：{{item.sumpeople}}人
+				</view>
+				<view wx:if="{{item.type=='1'}}" class="container-item-con-item container-item-con-item-right">
+					房间数：{{item.content}}
+				</view>
+				<view wx:if="{{item.type=='2'}}" style="padding: 20rpx 0;">{{item.content}}</view>
+				<view class="container-item-con-item container-item-con-item-left">
+					时间：{{item.begintime}}
+				</view>
+				<view class="container-item-con-item container-item-con-item-right">
+					<navigator hoverClass="none" openType="navigate" url="./detail/index?id={{item.id}}">
+						详情
+					</navigator>
+				</view>
+			</view>
+		</view>
+	</block>
+	
+	
+</view>
+<view class="go-appointment">
+	<navigator hoverClass="none" openType="navigate" url="./appointment/index">
+		在线预约
+	</navigator>
+		
+</view>

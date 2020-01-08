@@ -1,0 +1,66 @@
+/* pages/member/warrantycard/cardimg.wxss */
+.img{
+  width: 100%; 
+}
+page {
+  background-color: #83D5D3;
+}
+.policy {
+		width: 94%;
+		height: auto;
+		padding: 0 3% 20rpx;
+		background-color: #83D5D3;
+	}
+	.policy-top { text-align: center; color: #ffffff; }
+	.policy-top-title { font-size: 50rpx; padding: 60rpx 0 10rpx; font-weight: bolder; }
+	.policy-top-subtitle { font-size: 36rpx; font-weight: bolder; margin-bottom: 20rpx; }
+	.policy-cont {
+		width: 94%;
+	  padding: 80rpx 3%;
+		height: 620rpx;
+		background-size: 100% 100%;
+	}
+	.policy-cont-top { 
+    line-height: 52rpx; 
+    font-size: 28rpx;
+    padding-left: 25rpx;
+     }
+	.policy-cont-bot {
+		padding-top: 30rpx;
+     padding-left: 25rpx;
+	}
+	.policy-cont-bot-left {
+		width: 100%;
+		display: flex;
+	  display: -webkit-box;
+	  display: -webkit-flex;
+	  justify-content: space-between;
+	}
+	.policy-cont-bot-left .list { text-align: left; font-size: 24rpx; }
+	.policy-cont-bot-left .list:first-child { width: 45%; }
+	.policy-cont-bot-left .list:last-child { width: 55%; }
+	.policy-cont-bot-righ {
+		margin-top: 20rpx;
+		width: 100%;
+		display: flex;
+	  display: -webkit-box;
+	  display: -webkit-flex;
+	  justify-content: space-between;
+	}
+	.policy-cont-bot-righ .image { width: 200rpx; height: 200rpx; }
+	.policy-cont-bot-righ .image image { width: 100%; height: 100%; }
+	.policy-cont-bot-righ .detail { width: 65%; font-size: 26rpx; line-height: 56rpx;}
+	.policy-cont-bot-righ .detail .name { width: 100%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+	.policy-cont-bot-righ .detail .price { font-size: 34rpx; color: #E7B97C; font-weight: bolder; }
+	.policy-cont-bot-righ .detail .price .span { font-size: 24rpx; font-weight: initial; }
+	.policy-cont-bot-righ .detail .list {
+		width: 100%;
+		display: flex;
+	    display: -webkit-box;
+	    display: -webkit-flex;
+	    justify-content: space-between;
+	}
+	.policy-cont-bot-righ .detail .list .div { width: 33.333%; text-align: center; }
+	.heprice { color: #E7B97C; font-size: 40rpx; text-align: right; margin-top: 40rpx; }
+	.policy-bot { margin-top: 24rpx; color: #e48f1c; font-size: 28rpx; }
+	.policy-bot-zhu { margin-bottom: 40rpx; color: #000000; }

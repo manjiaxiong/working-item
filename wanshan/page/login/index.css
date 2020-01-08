@@ -1,0 +1,89 @@
+
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.container{
+			width: 1200px;
+			height: 700px;
+			/*border: 1px solid #000;*/
+			margin: 0 auto;
+			box-shadow: 10px 10px 30px rgba(0,0,0,0.3);
+			
+			padding: 40px 100px;
+			box-sizing: border-box;
+
+		}
+		.container .content{
+			height: 620px;
+			width: 1000px;
+			border-radius: 20px;
+			overflow: hidden;
+			/*margin: 40px 100px;*/
+			/*background-color: red;*/
+			background-image: url(../../images/26.png);
+			background-size: cover;
+			box-shadow: 10px 10px 30px rgba(0,0,0,0.3);
+		}
+		.container .content .item{
+			width: 50%;
+			height: 620px;
+			/*background-color: red;*/
+			float: right;
+		}
+		.container .content .item .item-title{
+			text-align: center;
+			color: #1166ff;
+			margin: 30px auto;
+			font-weight: 600;
+			font-size: 22px;
+		}
+		.container .content .item form{
+			width: 80%;
+			margin-left: 10%;
+			/*height: 400px;*/
+			/*background-color: black;*/
+		}
+		.container .content .item form label{
+			display: inline-block;
+			width: 20%;
+			text-align: left;
+			height: 40px;
+			line-height: 40px;
+			box-sizing: border-box;
+		}
+		.container .content .item form input{
+			width: 80%;
+			height: 40px;
+			line-height: 40px;
+			box-sizing: border-box;
+			padding-left: 15px;
+			border: 1px solid #ccc;
+			margin-bottom: 10px
+		}
+		#verification{
+			width: 40%;
+		}
+		.pre-ver{
+			width: 35%;
+			height: 40px;
+			line-height: 40px;
+			text-align: center;
+			margin-left: 5%;
+			display: inline-block;
+			background-color: #7d7d7d;
+			color: #fff;
+			font-size: 20px;
+			box-sizing: border-box;
+			vertical-align: middle;
+		}
+		button{  
+			width: 100%;
+			height: 50px;
+			line-height: 50px;
+			text-align: center;
+			background:linear-gradient(to right,#6fb2ff,#085ffe);/*Css3渐变色属性*/
+			color: #fffeff;
+			border: none;
+			FONTsi
+		}

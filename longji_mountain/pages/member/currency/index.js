@@ -1,0 +1,230 @@
+// pages/member/currency/index.js
+var t = getApp(),  h= t.requirejs("core");
+Page({
+
+	/**
+	 * 页面的初始数据
+	 */
+	data: {
+		headerBar: ['民宿', '餐饮'],
+		navbarActiveIndex: 0,
+		homestay: '',
+		catering: '',
+		homePage: 1,
+		caterPage: 1,
+		isNull:false
+	},
+
+	/**
+	 * 生命周期函数--监听页面加载
+	 */
+	onLoad: function(e) {
+		// console.log(1)
+		 // t.url(e);
+		var _this = this;
+		h.get(
+			'member.jie',{
+					page:_this.data.homePage,
+					psize:10,
+					type:1
+			},
+			function(res) {
+				// console.log(res)
+				if(res.error){
+					wx.showToast({
+						title: res.message
+						
+					})
+					_this.setData({
+						isNull:true
+					})
+					console.log(_this.data.isNull)
+					return
+				}
+				_this.setData({
+					homestay: res
+				})
+			})
+
+		h.get(
+			'member.jie',{
+				page:_this.data.caterPage,
+				psize:10,
+				type:2
+			},
+			function(res) {
+				if(res.error){
+					wx.showToast({
+						title: res.message
+						
+					})
+					_this.setData({
+						isNull:true
+					})
+					return
+				}
+				_this.setData({
+					catering: res
+				})
+			})
+	},
+
+	onReachBottom: function() { //上拉刷新页面
+	if(this.data.isNull==true){
+		return
+	}
+	var _this=this;
+		if (this.data.navbarActiveIndex == 0) { //民宿
+			
+			if (this.data.homestay.pagesize * this.data.homePage < this.data.homestay.total) {
+				wx.showNavigationBarLoading()//加载提醒
+				var homePage=this.data.homePage+1
+				h.get(
+					'member.jie',{
+						page:homePage,
+						psize:10,
+						type:1
+					},
+					function(res) {
+						var newList=_this.data.homestay
+						newList.list=newList.list.concat(res.list)
+						_this.setData({
+							homestay: newList,
+							homePage: homePage
+						})
+						wx.hideNavigationBarLoading()//取消加载提示
+					})
+			} else {
+				wx.showToast({
+					title: '已经没有啦',
+				})
+				return;
+			}
+		}else if(this.data.navbarActiveIndex == 1){//餐饮
+		
+			if (this.data.catering.pagesize * this.data.caterPage < this.data.catering.total) {
+				wx.showNavigationBarLoading()//加载提醒
+				var caterPage=this.data.caterPage+1
+				// console.log(caterPage)
+				h.get('member.jie',{
+					page:caterPage,
+					psize:10,
+					type:2
+				},
+					function(res) {
+						// console.log(2)
+						var newList=_this.data.catering
+						
+						newList.list=newList.list.concat(res.list)
+						
+						// console.log(newList.list)
+						_this.setData({
+							catering: newList,
+							caterPage:caterPage
+						})
+						wx.hideNavigationBarLoading()//取消加载提示
+						// console.log(3)
+					})
+			} else {
+				wx.showToast({
+					title: '已经没有啦',
+				})
+				return;
+			}
+		}
+
+	},
+	/**
+	 * 生命周期函数--监听页面初次渲染完成
+	 */
+	onReady: function() {
+
+	},
+
+	/**
+	 * 生命周期函数--监听页面显示
+	 */
+	onShow: function() {
+
+	},
+	gosubmit:function(event){
+		var _this=this;
+		if(this.data.navbarActiveIndex==0){
+			if(this.data.homestay.jie<=0){
+				wx.showToast({
+					title: res.message,
+					icon:'none'
+				})
+				return;
+			}
+		}else if(this.data.navbarActiveIndex==1){
+			if(this.data.catering.jie<=0){
+				wx.showToast({
+					title: res.message,
+					icon:'none'
+				})
+				return;
+			}
+		}
+		var type=event.currentTarget.dataset.type
+			h.get('member/jie/submit',{
+				type:type
+			},function(res){
+				if(res.error!=0){//小于一百元
+					wx.showToast({
+						title: res.message,
+						icon:'none'
+					})
+					return
+				}
+				wx.showToast({
+					title: res.message,
+					icon:'none'
+					
+				})
+				_this.onLoad()
+			})
+	},
+	/**
+	 * 生命周期函数--监听页面隐藏
+	 */
+	onHide: function() {
+
+	},
+
+	/**
+	 * 生命周期函数--监听页面卸载
+	 */
+	onUnload: function() {
+
+	},
+
+	/**
+	 * 页面相关事件处理函数--监听用户下拉动作
+	 */
+	onPullDownRefresh: function() {
+
+	},
+
+	/**
+	 * 页面上拉触底事件的处理函数
+	 */
+
+
+	/**
+	 * 用户点击右上角分享
+	 */
+	onShareAppMessage: function() {
+
+	},
+	onNavBarTap: function(event) { //顶部选项卡事件
+		// 获取点击的navbar的index
+		let navbarTapIndex = event.currentTarget.dataset.navbarIndex
+		// 设置data属性中的navbarActiveIndex为当前点击的navbar
+
+		this.setData({
+			navbarActiveIndex: navbarTapIndex
+		})
+
+	}
+})

@@ -1,0 +1,68 @@
+
+.all {
+	width: 100%;
+}
+.top {
+	width: 100%;
+	height: 320rpx;
+	background-image: url('http://lipinka.dingyuankeji.shop/test_/background.png');
+}
+.imgs {
+	width: 160rpx !important;
+	height: 160rpx;
+	border-radius: 50%;
+	margin-left: 40rpx;
+	margin-right: 40rpx;
+}
+.imgs_ {
+	width: 36rpx !important;
+	height: 46rpx;
+	margin-right: 30rpx;
+	-webkit-transform:rotate(180deg);
+	    -ms-transform:rotate(180deg);
+	        transform:rotate(180deg);
+}
+.m_item {
+	margin-top: 40rpx;
+	width: 100%;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	height: 180rpx;
+	color: #fff;
+}
+.m_item_text text {
+	font-size: 36rpx;
+}
+.m_item_text {
+	-webkit-box-align: start;
+	-webkit-align-items: flex-start;
+	    -ms-flex-align: start;
+	        align-items: flex-start;
+}
+.tail {
+	margin-top: 40rpx;
+	width: 98%;
+}
+.tail_item {
+	width: 100%;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	-webkit-flex-wrap: wrap;
+	    -ms-flex-wrap: wrap;
+	        flex-wrap: wrap;
+}
+.t_item {
+	width: 29%;
+	margin: 5% 2%;
+}
+.t_item image {
+	width: 78rpx !important;
+	height: 78rpx;
+	margin-bottom: 20rpx;
+	/* border-radius: 50%; */
+}
+

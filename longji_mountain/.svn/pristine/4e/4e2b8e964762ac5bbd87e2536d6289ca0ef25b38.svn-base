@@ -1,0 +1,55 @@
+<template name='fengcaiCon'>
+	<view class="fenbar to-flex w90">
+		<block wx:for="{{fencaiTitle}}" wx:key="index">
+			<view class="fenbar-item {{fencaiActiveIndex === index ? 'fenbar-item-active' : ''}}" data-navbar-index="{{index}}"
+			 catchtap="onFenBarTap">
+				<text>{{item}}</text>
+			</view>
+		</block>
+	</view>
+	<view class="fen-con" catchtap="tapArticleItem">
+		<view class="m-list-con">
+			<view class="m-list-item ">
+				<view class="m-list-item-title">
+					新理念 新产业 新机遇————鹤壁东区发展规划实绩多大的
+				</view>
+				<view class="m-list-item-detail to-flex">
+					<view class="m-list-item-detail-left"><text>龙港之星</text> | <text>2019-12-21</text> <text>15:23</text></view>
+					<view class="m-list-item-detail-right"> <image src="http://app.uhuoduo.com/attachment/app/bofang.png" alt="" />  播放 </view>
+				</view>
+			</view>
+		</view>
+	</view>
+	<view class="m-list-con">
+		<view class="m-list-item" catchtap="tapArticleItem">
+			<view class="m-list-item-title">
+				新理念 新产业 新机遇————鹤壁东区发展规划实绩多大的
+			</view>
+			<view class="m-list-item-title-image to-flex">
+				<image src="http://app.uhuoduo.com/attachment/app/img7.png" alt="" />
+				<image src="http://app.uhuoduo.com/attachment/app/img7.png" alt="" />
+				<image src="http://app.uhuoduo.com/attachment/app/img7.png" alt="" />
+			</view>
+			<view class="m-list-item-detail to-flex">
+				<view class="m-list-item-detail-left"><text>龙港之星</text> | <text>2019-12-21</text> <text>15:23</text></view>
+				<view class="m-list-item-detail-right"> <image src="http://app.uhuoduo.com/attachment/app/bofang.png" alt="" />  播放 </view>
+			</view>
+		</view>
+	</view>
+	<view class="c-list-item " catchtap="tapArticleItem">
+		<navigator openType="navigate" url="#">
+			<view class="c-list-item-titile to-flex">
+				<view class="c-list-item-titile-left">
+					新理念 新产业 新机遇——鹤壁东区发展规划实绩多大的
+				</view>
+				<view class="c-list-item-titile-right">
+					<image src="http://app.uhuoduo.com/attachment/app/img5.png" alt=""></image>
+				</view>
+			</view>
+			<view class="c-list-item-detail to-flex">
+				<view class="c-list-item-detail-left"><text>龙港之星</text> | <text>2019-12-21</text> <text>15:23</text></view>
+				<view class="c-list-item-detail-right"> <image src="http://app.uhuoduo.com/attachment/app/bofang.png" alt="" /> 播放 </view>
+			</view>
+		</navigator>
+	</view>
+</template>

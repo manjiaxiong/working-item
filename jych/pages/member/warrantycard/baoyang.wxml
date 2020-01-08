@@ -1,0 +1,4 @@
+<view class="policy"> 
+  <image src="{{url}}" class="img" mode="widthFix" bindtap="preview"  data-src="{{url}}"  data-urls="{{url}}"></image>
+  <!-- bindlongpress="saveImg" -->
+</view>

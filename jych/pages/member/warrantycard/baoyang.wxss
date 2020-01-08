@@ -1,0 +1,4 @@
+/* pages/member/warrantycard/baoyang.wxss */
+.img{
+  width: 100%; 
+}

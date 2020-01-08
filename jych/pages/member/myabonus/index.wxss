@@ -1,0 +1,53 @@
+/* pages/member/myabonus/index.wxss */
+.liner{
+  width: 100%;
+  background-color: #f3f3f3;
+}
+.top-refer{
+  margin-top: 30rpx;
+  background-color: #fff;
+}
+.icon {
+    font-family: "icon" !important;
+    font-size: 32rpx;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    margin-right: 10rpx;
+}
+.refer-t{
+  color: #333;
+  font-size: 28rpx;
+}
+.iview{
+  padding: 24rpx;
+  box-sizing: border-box;
+}
+.refer-con{
+  font-size: 26rpx;
+  color: #666;
+  margin-top: 20rpx;
+}
+.red-t{
+  color: red
+}
+.blue-t{
+  color: #45c1c1
+}
+.conten-img{
+  width: 100%;
+  height: 30vh;
+  margin-top: 3vh;
+  /* margin-bottom: 1vh; */
+}
+button{
+  background-color: #ff5555;
+  background-color: #45c1c1;
+  color: #fff;
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+}
+.text-danger {
+  color: #45c1c1;
+}

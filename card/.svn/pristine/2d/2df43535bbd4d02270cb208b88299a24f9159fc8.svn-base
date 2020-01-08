@@ -1,0 +1,67 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*每个页面公共css */
+.display_column {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+}
+.display_row {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: row;
+	    -ms-flex-direction: row;
+	        flex-direction: row;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+}
+.red {
+	color: red;
+}
+.ccc {
+	color: #999999;
+}
+.bule {
+	color: #4D95E5;
+}
+.btn {
+	font-size: 36rpx;
+	overflow: hidden;
+	color: #fff;
+	-webkit-box-shadow: 2rpx 6rpx 10rpx rgba(255,92,56,.25);
+	        box-shadow: 2rpx 6rpx 10rpx rgba(255,92,56,.25);
+	white-space: nowrap;
+	vertical-align: middle;
+	cursor: pointer;
+	border-radius: 60rpx;
+}
+

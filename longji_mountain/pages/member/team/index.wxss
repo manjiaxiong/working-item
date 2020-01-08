@@ -1,0 +1,91 @@
+/* pages/member/team/index.wxss */
+.content {
+	background-color: #f8f8f8;
+}
+
+.to-flex {
+	display: flex;
+	justify-content: space-between;
+}
+
+.w90 {
+	width: 90%;
+	margin-left: 5%;
+}
+
+.p90 {
+	padding: 0 5%;
+}
+
+.container {
+	padding-bottom: 80rpx;
+}
+
+.container-item {
+	margin-top: 30rpx;
+	padding: 20rpx;
+	border-radius: 10rpx;
+	background-color: #fff;
+	width: 90%;
+	margin-left: 2.5%;
+	box-shadow: 0px 0px 10px 0px #ccc;
+}
+
+.container-item-con {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.container-item-title {
+	padding: 20rpx 0;
+	border-bottom: 1px dashed #eee;
+}
+
+.container-item-con-item {
+	width: 50%;
+	padding: 20rpx 0;
+}
+
+.container-item-con-item-left {
+	text-align: left;
+}
+
+.container-item-con-item-right {
+	text-align: right;
+}
+
+.container-item-con-item-right navigator {
+	display: inline-block;
+	padding: 0 15rpx;
+	height: 44rpx;
+	line-height: 44rpx;
+	/* background-color: #49bdcc; */
+	color: #49bdcc;
+	border: 1rpx solid #49bdcc;
+	border-radius: 22rpx;
+}
+
+.to-cancel {
+	display: inline-block;
+	padding: 0 15rpx;
+	height: 45rpx;
+	line-height: 45rpx;
+	/* background-color: #999; */
+	color: #9b9b9b;
+	border-radius: 22rpx;
+	margin-right: 25rpx;
+	border: 1rpx solid #9b9b9b;
+}
+
+.go-appointment {
+	height: 80rpx;
+	line-height: 80rpx;
+	text-align: center;
+	background-color: #49bdcc;
+	font-size: 34rpx;
+	font-weight: bolder;
+	color: #fff;
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+}

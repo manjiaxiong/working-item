@@ -1,0 +1,118 @@
+<template name='indexCon'>
+	<view class='swiper-box'>
+		<swiper autoplay="true" interval="3000" duration="500" bindchange="swiperChange">
+			<block wx:for="{{indexdata.banners}}" wx:for-item="seiperItrm" wx:key="index">
+				<swiper-item>
+					<image src="{{seiperItrm.thumb}}" class="slide-image" />
+					<view class='swiper-item-refer'>{{seiperItrm.bannername}}</view>
+				</swiper-item>
+			</block>
+		</swiper>
+		<view class="dots">
+			<block wx:for="{{indexdata.banners}}" wx:key="index" data-is="swiperCurrent">
+				<view class="dot{{index == current ? ' active' : ''}}"></view>
+			</block>
+		</view>
+	</view>
+	<view class="listCon">
+		<block wx:for="{{indexdata.list}}" wx:for-item="item" wx:key="index">
+			<block wx:if="{{item.style=='1'}}">
+				<view class="m-list-con" catchtap="tapArticleItem" data-detailA="{{item}}">
+					<view class="m-list-item ">
+						<view class="m-list-item-title">
+							{{item.title}}
+						</view>
+						<view class="m-list-item-detail to-flex">
+							<view class="m-list-item-detail-left"><text>{{item.author}}</text> | <text>{{item.createtime}}</text> <text>{{item.allshitime}}</text></view>
+							<block wx:if="{{item.audiourl}}">
+								<view class="m-list-item-detail-right" data-title="{{item.title}}" wx:if="{{'a'+index!=activeIndex}}" catchtap='tapMusic' data-index="a{{index}}"
+								 data-imusic="{{item.audiourl}}">
+									<image src="http://app.uhuoduo.com/attachment/app/bofang.png" alt="" /> 播放
+								</view>
+								<view class="m-list-item-detail-right" data-title="{{item.title}}" wx:if="{{'a'+index==activeIndex}}" catchtap='tapMusic' data-index="a{{index}}"
+								 data-imusic="{{item.audiourl}}">
+									<image src="http://app.uhuoduo.com/attachment/app/zanting.png" alt="" /> 暂停
+								</view>
+							</block>
+						</view>
+					</view>
+				</view>
+			</block>
+			<block wx:if="{{item.style=='2'}}">
+				<view class="b-list-con" catchtap="tapArticleItem" data-detailA="{{item}}">
+					<view class="b-list-item">
+						<view class="b-list-item-titile to-flex">
+							<view class="b-list-item-titile-left">{{item.title}}</view>
+							<view class="b-list-item-titile-right">
+								<navigator openType="navigate" url="#">更多 ></navigator>
+							</view>
+						</view>
+						<view class="b-list-item-img">
+							<navigator openType="navigate" url="#">
+								<image src="{{item.thumbs[0]}}" alt=""></image>
+							</navigator>
+						</view>
+					</view>
+
+				</view>
+			</block>
+			<block wx:if="{{item.style=='3'}}">
+				<view class="c-list-item " catchtap="tapArticleItem">
+					<navigator openType="navigate" url="#">
+						<view class="c-list-item-titile to-flex">
+							<view class="c-list-item-titile-left">
+								{{item.title}}
+							</view>
+							<view class="c-list-item-titile-right">
+								<image src="{{item.thumbs[0]}}" alt=""></image>
+							</view>
+						</view>
+						<view class="c-list-item-detail to-flex">
+							<view class="c-list-item-detail-left"><text>{{item.author}}</text> | <text>{{item.createtime}}</text> <text>{{item.allshitime}}</text></view>
+							<block wx:if="{{item.audiourl}}">
+								<view class="c-list-item-detail-right" wx:if="{{'a'+index!=activeIndex}}" catchtap='tapMusic' data-index="{{index}}"
+								 data-imusic="{{item.audiourl}}">
+									<image src="http://app.uhuoduo.com/attachment/app/bofang.png" alt="" /> 播放
+								</view>
+								<view class="c-list-item-detail-right" wx:if="{{'a'+index==activeIndex}}" catchtap='tapMusic' data-index="{{index}}"
+								 data-imusic="{{item.audiourl}}">
+									<image src="http://app.uhuoduo.com/attachment/app/zanting.png" alt="" /> 暂停
+								</view>
+							</block>
+						</view>
+					</navigator>
+				</view>
+			</block>
+			<block wx:if="{{item.style=='4'}}">
+				<view class="m-list-con" catchtap="tapArticleItem">
+					<view class="m-list-item ">
+						<view class="m-list-item-title">
+							{{item.title}}
+						</view>
+						<view class="m-list-item-title-image to-flex">
+							<block wx:for="{{item.thumbs}}" wx:for-item="image" wx:key="index">
+								<image src="{{image}}" alt="" />
+							</block>
+						</view>
+						<view class="m-list-item-detail to-flex">
+							<view class="m-list-item-detail-left"><text>{{item.author}}</text> | <text>{{item.createtime}}</text> <text>{{item.allshitime}}</text></view>
+							<block wx:if="{{item.audiourl}}">
+								<view class="m-list-item-detail-right" data-title="{{item.title}}" wx:if="{{'a'+index!=activeIndex}}" catchtap='tapMusic' data-index="a{{index}}"
+								 data-imusic="{{item.audiourl}}">
+									<image src="http://app.uhuoduo.com/attachment/app/bofang.png" alt="" /> 播放
+								</view>
+								<view class="m-list-item-detail-right" data-title="{{item.title}}" wx:if="{{'a'+index==activeIndex}}" catchtap='tapMusic' data-index="a{{index}}"
+								 data-imusic="{{item.audiourl}}">
+									<image src="http://app.uhuoduo.com/attachment/app/zanting.png" alt="" /> 暂停
+								</view>
+							</block>
+						</view>
+					</view>
+				</view>
+			</block>
+		</block>
+	</view>
+
+
+
+</template>

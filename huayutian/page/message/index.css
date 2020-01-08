@@ -1,0 +1,140 @@
+	
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	.container{
+		width: 100%;
+		/*margin-left: 5%;*/
+	}
+	body{
+		overflow: visible;
+	}
+	li|{
+		list-style: none;
+	}
+/*顶部开始*/
+	/*顶部导航开始*/
+		.header {
+			margin-top: 0.2rem;
+			width: 100%;
+			/*margin-left: 5%;*/
+			/*margin-bottom: 0.6rem;*/
+			margin-top: 0.5rem;
+			border-bottom: 1px solid #ccc;
+			padding-bottom: 0.3rem;
+		}
+		.header .header-nav{
+			/*width: 100%;*/
+			width: 90%;
+			margin-left: 5%;
+			display: flex;
+			height: 1.2rem;
+			position: relative;
+			text-align: center;
+			/*justify-content: space-between;*/
+		}
+		.header .header-nav img{
+			/*margin-left: 5%;*/
+			width: 8%;
+			position: absolute;
+
+		}
+		.header .header-nav .iconfont{
+			/*color: red;*/
+			height: 1.8rem;
+			line-height: 1.8rem;
+			float: right;
+			vertical-align: text-bottom;
+			color: #987ff5;
+			margin-left: 5%;
+			font-size: 1rem;
+		}
+		.header .header-nav p{
+			font-size: 18px;
+			font-weight: 600;
+			color: #535970;
+			text-align: middle;
+			/*margin-left: 50%;*/
+			margin: 0 auto;
+		}
+		/*消息内容开始*/
+		.message li{
+			width: 100%;
+			height: 2.6rem;
+			line-height: 2.6rem;
+			border-bottom: 1px solid #ccc;
+			/*overflow: hidden;*/
+		}
+		.message li .people-head{
+			float: left;
+			height: 2.2rem;
+			width: 2.2rem;
+			margin-left: 5%;
+			border-radius: 1.1rem;
+			/*background-color: red;*/
+			background-size: cover;
+			margin-top: 1%;
+
+		}
+		.message li:nth-of-type(1) .people-head{
+			background-image: url(../../images/15.png);
+			 
+		}
+		.message li:nth-of-type(2) .people-head{
+			background-image: url(../../images/16.png);
+			 
+		}
+		.message li:nth-of-type(3) .people-head{
+			background-image: url(../../images/17.png);
+			 
+		}
+		.message li:nth-of-type(4) .people-head{
+			background-image: url(../../images/18.png);
+			 
+		}
+		.message li:nth-of-type(5) .people-head{
+			background-image: url(../../images/19.png);
+			 
+		}
+		
+		.message li .people-con{
+			float: left;
+			width:75%;
+			/*height: 1.8rem;*/
+			/*background-color: red;*/
+			margin-left: 0.4rem;
+			/*line-height: 1.8rem;*/
+		}
+		.message li .people-con .people-con-top {
+			/*float: left;*/
+			/*overflow: hidden;*/
+			position: relative;
+			
+
+		}
+		.message li .people-con .people-con-top .intro{
+			float: left;
+			/*vertical-align: top;*/
+			margin-top: -4%;
+			font-weight: 400;
+			color: #333333;
+			/*margin-bottom: 0.3rem;*/
+		}
+		.message li .people-con .people-con-top .people-time{
+			float: right;
+			color: #989898;
+			margin-top: -4%;
+		}
+		.people-con-top p{
+			/*float: left;*/
+			position: absolute;
+			width: 65%;
+			white-space:nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			margin-top: 1%;
+			color: #989898;
+			margin-top: 0.4rem;
+		}
+	

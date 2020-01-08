@@ -1,0 +1,29 @@
+<template name='homeCon'>
+	<view class="content-item">
+		<view class="content-item-top to-flex">
+			<view class="content-item-top-left">订单号：11111111</view>
+			<view class="content-item-top-left">待完成</view>
+		</view>
+		<view class="content-item-bottom to-flex">
+			<view class="content-item-bottom-left">
+				<image src="http://app.uhuoduo.com/attachment/app/2223.png" alt=""></image>
+			</view>
+			<view class="content-item-bottom-right">
+				<view class="content-item-bottom-right-top">老李家亲子房</view>
+				<view class="content-item-bottom-right-middle">下单时间：2019-12-11</view>
+				<view class="content-item-bottom-right-bottom">订单金额：￥233</view>
+			</view>
+		</view>
+	</view>
+	<view class="to-pay">
+		<view class="to-play-left">
+			待结算 <text>￥299</text>
+		</view>
+		<view class="to-play-middle">
+			已结算 ￥1254.00
+		</view>
+		<view class="to-play-right">
+			提交结算
+		</view>
+	</view>
+</template>

@@ -1,0 +1,4 @@
+.m-list-item-title .m-list-item-title-green{
+	color: #42bbce;
+	margin-right: 8rpx;
+}

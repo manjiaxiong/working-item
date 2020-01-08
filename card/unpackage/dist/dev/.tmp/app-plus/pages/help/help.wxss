@@ -1,0 +1,23 @@
+
+.all {
+	width: 100%;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+}
+.recovery,
+.service {
+	padding: 40rpx 40rpx;
+	font-size: 36rpx;
+}
+uni-image {
+    width: 40rpx !important;
+}
+.recovery image,
+.service image {
+	height: 40rpx;
+	border-radius: 50%;
+	margin-right: 20rpx;
+}
+

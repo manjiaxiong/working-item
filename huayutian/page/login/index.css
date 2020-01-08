@@ -1,0 +1,205 @@
+/*顶部开始*/
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		body{
+			height: 3000px;
+			overflow: visible;
+		}
+		.big{
+			width: 100%;
+			position: relative;
+		}
+		.top{
+			text-align: center;
+			position: relative;
+		}
+		.top .top-back{
+			width: 1rem;
+			position: absolute;
+			left: 0.4rem;
+			top: 2rem;
+		}
+		.top .top-middle{
+			width: 300px;
+			
+		}
+/*中部开始*/
+		.middle{
+			background-color: green;
+			background-color:white;
+			margin-left: 10%;
+			width: 80%;
+			height: 350px;
+			top: 100px;
+			opacity: 0.7;
+			/*left: -100px;*/
+			margin-top: -5rem;
+			border-radius: 10px;
+			box-shadow: 10px 10px 30px rgba(0,0,0,0.3);
+			text-align: center;
+			/*margin-top: -100px;*/
+			overflow: hidden;
+		}
+		.middle-top{
+			width: 100%;
+			height: 40px;
+			margin-top: 1.5rem;
+			font-weight: 600;
+			/*border: 1px solid #000;*/
+		}
+		.middle-top .mode1{
+			float: left;
+			margin-left: 2rem;
+			cursor: pointer;
+		}
+		.middle-top .mode2{
+			float: right;
+			margin-right: 2rem;
+			cursor: pointer;
+		}
+		.middle .input-top{
+			margin: 0 auto;
+			width: 88%;
+			height: 40px;
+			border: 2px solid #ccc;
+			margin-top: 20px;
+			border-radius: 20px;
+			position: relative;
+		}
+		.middle .input-top  .input-top-select{
+			position: absolute;
+			top:0.5rem;
+			left: 1rem;
+		}
+		.middle input{
+			height: 36px;
+			width: 90%;
+			border: none;
+			outline: none;
+			box-sizing: border-box;
+			border-radius: 20px;
+			padding-left: 0.5rem;
+		}
+		.middle .input-top input{
+			padding-left: 2.5rem;
+		}
+		.middle .input-bottom{
+			margin: 0 auto;
+			width: 88%;
+			height: 40px;
+			border: 2px solid #ccc;
+			border-radius: 20px;
+			margin-top: 40px;
+			
+		}
+
+		.middle .input-bottom .require{
+			color: red;
+			margin-left:-65px; 
+			font-size: 12px;
+			cursor: pointer;
+		}
+		.middle .input-bottom .time{
+			width: 40px;
+			height: 30px;
+			background-color: red;
+			left: -200px;
+		}
+		.middle .mess{
+			margin-top: 10px;
+			font-size: 12px;
+			color: #aaa;
+		}
+		.middle .login{
+			width: 88%;
+			height: 40px;
+			margin: 0 auto;
+			line-height: 40px;
+			background-color: #ccc;
+			border-radius: 20px;
+			color: #fff;
+			margin-top: 20px;
+		}
+		.middle .login:hover{
+			background-color: green;
+		}
+/*低部开始*/
+		.bottom{
+			margin-top: 2rem;
+			width: 60%;
+			margin-left: 20%;
+			display: flex;
+			justify-content: space-between;
+		}
+		.bottom img{
+			width: 40px;
+		}
+/*固定开始*/
+		.fixed{
+			/*margin-top: 10rem;*/
+			color: #9a9a9a;
+			font-size: 12px;
+			text-align: center;
+		}
+		.fixed .deal{
+			margin-bottom: 4rem;
+			margin-top: 8rem;
+		}
+		.fixed a{
+			color: #5e4deb;
+		}
+		.fixed .fixed-nav{
+			z-index: 100;
+			background-color: white;
+			border-top: 1px solid #ccc;
+			display: flex;
+			position: fixed;
+			bottom: 0px;
+			justify-content:space-around;
+			width: 100%;
+			height: 3rem;
+			line-height: 3rem;
+
+		}
+		.fixed .fixed-nav li{
+			list-style: none;
+			
+		}
+		.fixed .fixed-nav img{
+			width: 1.2rem;
+			vertical-align: middle;
+		}
+		.fixed .fixed-nav .fixed-nav-add{
+			width: 2.2rem
+		}
+/*选中设置*/
+		.login-active{
+			position: relative;
+		}
+		.login-active:after{
+			position: absolute;
+			top: 1rem;
+			left: 50%;
+			margin-left: -0.8rem;
+			width: 1.6rem;
+			height: 0.2rem;
+			border-radius: 0.1rem;
+			background:linear-gradient(to right,#c69af9,#7d6df2);
+			content: "";
+		}
+		.register-active{
+			position: relative;
+		}
+		.register-active:after{
+			position: absolute;
+			top: 1rem;
+			left: 50%;
+			margin-left: -1.2rem;
+			width: 2.4rem;
+			height: 0.2rem;
+			border-radius: 0.1rem;
+			background:linear-gradient(to right,#c69af9,#7d6df2);
+			content: "";
+		}

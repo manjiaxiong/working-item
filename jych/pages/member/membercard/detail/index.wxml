@@ -1,0 +1,365 @@
+<view class="page" style="">
+	<view>
+		<image src="https://jych.jinyincuihui.com/addons/ewei_shopv2/template/mobile/default/static/images/100.png" style="width: 100%;position: relative; z-index: 3; height: 725rpx;"></image>
+	</view>
+	<view class="fui-content-middle">
+		<view class="list" style="margin-top:40rpx">
+			<image src="https://jych.jinyincuihui.com/addons/ewei_shopv2/template/mobile/default/static/images/101.png" style="width: 100rpx; height: 100rpx;"></image>
+			<view class="p" style=" color: #201e12;">
+				邀请多重奖励
+				<image bindtap="duoshow" src="https://jych.jinyincuihui.com/addons/ewei_shopv2/plugin/membercard/static/images/5.png"
+				 style="margin-left: .1rem; height: 1rem; width:1rem; vertical-align: text-bottom;" data-id="1"></image>
+			</view>
+			<!-- <view class="p">团队成员及下级成员开通</view> -->
+			<!-- <view class="p">您将获得开通奖励</view> -->
+		</view>
+		<view class="list" style="margin-top:40rpx">
+			<image src="https://jych.jinyincuihui.com/addons/ewei_shopv2/template/mobile/default/static/images/102.png" style="width: 100rpx; height: 100rpx;"></image>
+			<view class="p" style=" color: #201e12;">下单多重返利<image bindtap="duoshow" src="https://jych.jinyincuihui.com/addons/ewei_shopv2/plugin/membercard/static/images/5.png"
+				 style="margin-left: .1rem; height: 1rem; width:1rem; vertical-align: text-bottom;" data-id="2"></image></view>
+			<!-- <view class="p">团队成员及下级成员下单</view> -->
+			<!-- <view class="p">您将获得订单奖励</view> -->
+		</view>
+		<view class="list" style="margin-top:40rpx" >
+			<image src="https://jych.jinyincuihui.com/addons/ewei_shopv2/template/mobile/default/static/images/103.png" style="width: 100rpx; height: 100rpx;"></image>
+			<view class="p" style="color: #201e12;margin-bottom: .3rem 0;">个人品牌商城<image bindtap="duoshow" src="https://jych.jinyincuihui.com/addons/ewei_shopv2/plugin/membercard/static/images/5.png"
+				 style="margin-left: .1rem; height: 1rem; width:1rem; vertical-align: text-bottom;" data-id="3"></image></view>
+			<!-- <view class="p">一键升成 全面展示</view> -->
+		</view>
+		<view class="list" style="margin-top:40rpx" >
+			<image src="https://jych.jinyincuihui.com/addons/ewei_shopv2/template/mobile/default/static/images/104.png" style="width: 100rpx; height: 100rpx;"></image>
+			<view class="p" style="color: #201e12;margin-bottom: .3rem 0;">个人品牌商城<image bindtap="duoshow" src="https://jych.jinyincuihui.com/addons/ewei_shopv2/plugin/membercard/static/images/5.png"
+				 style="margin-left: .1rem; height: 1rem; width:1rem; vertical-align: text-bottom;" data-id="4"></image></view>
+			<!-- <view class="p">一键升成 全面展示</view> -->
+		</view>
+	</view>
+	<view class="mask" bindtap="duohide" wx-if="{{show}}"></view>
+	<view class="mask-con" wx-if="{{show&&maskShow==='1'}}">
+		<view class="mask-con-header">
+			<image class="img" src="https://jych.jinyincuihui.com/addons/ewei_shopv2/plugin/membercard/static/images/6.png"></image>
+			邀请多重奖励
+			<image class="img" src="https://jych.jinyincuihui.com/addons/ewei_shopv2/plugin/membercard/static/images/1(3).png"></image>
+		</view>
+
+		<view class="mask-con-middle">
+			<view class="num">1</view>
+			<view class="mask-con-middle-item">
+				<view class="">每邀请一位好友邀请开通此批发商</view>
+				<view class="">您将获得50%开通费</view>
+			</view>
+		</view>
+		<view class="mask-con-middle">
+			<view class="num">2</view>
+			<view class="mask-con-middle-item">
+				<view class="">每邀请一位好友邀请开通此批发商</view>
+				<view class="">您将获得50%开通费</view>
+			</view>
+		</view>
+
+	</view>
+	<view class="mask-con" wx-if="{{show&&maskShow==='2'}}">
+		
+		<view class="mask-con-header" style="margin-top: 20rpx;">
+			<image class="img" src="https://jych.jinyincuihui.com/addons/ewei_shopv2/plugin/membercard/static/images/6.png"></image>
+			下单多重奖励
+			<image class="img" src="https://jych.jinyincuihui.com/addons/ewei_shopv2/plugin/membercard/static/images/1(3).png"></image>
+		</view>
+		<view class="mask-con-middle">
+			<view class="num">1</view>
+			<view class="mask-con-middle-item">
+				<view class="">每邀请一位好友邀请开通此批发商</view>
+				<view class="">您将获得50%开通费</view>
+			</view>
+		</view>
+		<view class="mask-con-middle">
+			<view class="num">1</view>
+			<view class="mask-con-middle-item">
+				<view class="">每邀请一位好友邀请开通此批发商</view>
+				<view class="">您将获得50%开通费</view>
+			</view>
+		</view>
+	</view>
+	<view class="mask-con" wx-if="{{show&&maskShow==='3'}}">
+		
+		<view class="mask-con-header" style="margin-top: 20rpx;">
+			<image class="img" src="https://jych.jinyincuihui.com/addons/ewei_shopv2/plugin/membercard/static/images/6.png"></image>
+			个人品牌商城
+			<image class="img" src="https://jych.jinyincuihui.com/addons/ewei_shopv2/plugin/membercard/static/images/1(3).png"></image>
+		</view>
+		<view class="mask-con-middle">
+			<view class="num">1</view>
+			<view class="mask-con-middle-item">
+				<view class="">一键升成 </view>
+				<view class="">全面展示</view>
+			</view>
+		</view>
+		
+	</view>
+	<view class="mask-con" wx-if="{{show&&maskShow==='4'}}">
+		
+		<view class="mask-con-header" style="margin-top: 20rpx;">
+			<image class="img" src="https://jych.jinyincuihui.com/addons/ewei_shopv2/plugin/membercard/static/images/6.png"></image>
+			全品类珠宝
+			<image class="img" src="https://jych.jinyincuihui.com/addons/ewei_shopv2/plugin/membercard/static/images/1(3).png"></image>
+		</view>
+		<view class="mask-con-middle">
+			<view class="num">1</view>
+			<view class="mask-con-middle-item">
+				<view class="">一手货源 </view>
+				<view class="">专属采购一对一服务</view>
+			</view>
+		</view>
+		
+	</view>
+	<view class="card-swiper" style="display: none;">
+		<swiper autoplay="{{autoplay}}" bindchange="swiperchange" current="{{current}}" duration="1000" indicatorDots="{{indicatorDots}}"
+		 interval="5000" nextMargin="30rpx" previousMargin="60rpx">
+			<swiper-item wx:for="{{list}}" wx:key="card_key">
+				<view class="clubcard  {{item.card_style}} {{index==current?'big':''}}">
+					<i class="icon-bg icox icox-huangguan-line"></i>
+					<view class="content">
+						<view class="icon">
+							<image src="/static/images/icon-huangguan.png"></image>
+						</view>
+						<view class="title">{{item.name}}</view>
+						<view class="subtitle">
+							<block wx:if="{{item.startbuy==0}}">{{item.validate}}</block>
+							<block wx:else>享受{{item.rightsnum}}项特权</block>
+						</view>
+						<view bindtap="submit" class="opencard" data-id="{{item.id}}" data-startbuy="{{item.startbuy}}" data-stock="{{item.stock}}"
+						 data-val="{{item.validate}}">
+							<block wx:if="{{item.startbuy==1}}">立即开通</block>
+							<block wx:if="{{item.startbuy==-1}}">永久有效</block>
+							<block wx:if="{{item.startbuy==2}}">重新购买</block>
+							<block wx:if="{{item.startbuy==0}}">{{item.validate=='永久有效'?'永久有效':'续费'}}</block>
+						</view>
+					</view>
+				</view>
+			</swiper-item>
+		</swiper>
+	</view>
+	<view class="card-group nomargin" style="padding-bottom: 36rpx; display: none;">
+		<view class="card-title">会员特权</view>
+		<view class="card-btn-group">
+			<view class="card-btn-item" wx:if="{{list[current].shipping==1}}">
+				<view class="card-btn-icon">
+					<view class="icon">
+						<i class="icox icox-mianfeibaoyou"></i>
+					</view>
+				</view>
+				<view class="card-btn-text">免费包邮</view>
+			</view>
+			<view class="card-btn-item" wx:if="{{list[current].member_discount==1}}">
+				<view class="card-btn-icon">
+					<view class="icon">
+						<i class="icox icox-zhekoutequan"></i>
+					</view>
+				</view>
+				<view class="card-btn-text">折扣特权</view>
+			</view>
+			<view class="card-btn-item" wx:if="{{list[current].is_card_coupon==1}}">
+				<view class="card-btn-icon">
+					<view class="icon">
+						<i class="icox icox-kaiqiasongquan"></i>
+					</view>
+				</view>
+				<view class="card-btn-text">开卡送券</view>
+			</view>
+			<view class="card-btn-item" wx:if="{{list[current].is_card_points==1}}">
+				<view class="card-btn-icon">
+					<view class="icon">
+						<i class="icox icox-kaiqiajifen"></i>
+					</view>
+				</view>
+				<view class="card-btn-text">开卡送积分</view>
+			</view>
+			<view class="card-btn-item" wx:if="{{list[current].is_month_coupon==1}}">
+				<view class="card-btn-icon">
+					<view class="icon">
+						<i class="icox icox-meiyuelingquan"></i>
+					</view>
+				</view>
+				<view class="card-btn-text">每月领券</view>
+			</view>
+			<view class="card-btn-item" wx:if="{{list[current].is_month_points==1}}">
+				<view class="card-btn-icon">
+					<view class="icon">
+						<i class="icox icox-meiyuejifen"></i>
+					</view>
+				</view>
+				<view class="card-btn-text">每月积分</view>
+			</view>
+			<view class="card-btn-item">
+				<view class="card-btn-icon">
+					<view class="icon">
+						<i class="icox icox-meiyuelingquan"></i>
+					</view>
+				</view>
+				<view class="card-btn-text">敬请期待</view>
+			</view>
+		</view>
+	</view>
+	<view class="card-group" style="padding-bottom: 34rpx;" wx:if="{{list[current].member_discount==1}}">
+		<view class="card-title">会员折扣</view>
+		<view class="card-subtitle">会员可享受折扣价格</view>
+		<view class="card-fiche gary">
+			<view class="fiche-icon">
+				<i class="icox icox-huiyuanzhuanxiangzhekou"></i>
+			</view>
+			<view class="fiche-inner">
+				<view class="title">会员专享折扣</view>
+			</view>
+			<view class="fiche-btn">全场
+				<span>{{list[current].discount_rate}}</span>折</view>
+		</view>
+	</view>
+	<view class="card-group" wx:if="{{list[current].is_card_coupon==1||list[current].is_card_points==1}}">
+		<view class="card-title">开卡赠送</view>
+		<view class="card-subtitle">会员开卡即送优惠券、积分</view>
+		<view class="coupon-list left">
+			<view class="coupon-list-item" wx:for="{{list[current].card_coupon}}" wx:for-item="idx" wx:key="coupon_key">
+				<view class="circle-l"></view>
+				<view class="circle-r"></view>
+				<view class="coupon-inner">
+					<view class="price" wx:if="{{idx.backtype==0}}">￥<span>{{idx.deduct}}</span>
+					</view>
+					<view class="price" wx:if="{{idx.backtype==1}}">
+						<span>{{idx.discount}}</span>折</view>
+					<view class="price" wx:if="{{idx.backtype==2}}">
+						<span>返现</span>
+					</view>
+					<view class="explain">{{idx.title2}}</view>
+					<view class="condition" style="{{list[current].startbuy==0?'color: #666':''}}">{{list[current].startbuy==0?'已发放':idx.use_limit}}</view>
+				</view>
+			</view>
+		</view>
+		<view class="card-fiche golden" style="margin-top: 0;" wx:if="{{list[current].is_card_points==1}}">
+			<view class="fiche-icon">
+				<i class="icox icox-kaiqiajifen"></i>
+			</view>
+			<view class="fiche-inner">
+				<view class="title">开通立享积分</view>
+				<view class="subtitle">{{list[current].card_points}}
+					<span>积分</span>
+				</view>
+			</view>
+			<view class="fiche-btn">
+				<view class="btn-submit border">{{list[current].startbuy==0?'已发放':'开通送积分'}}</view>
+			</view>
+		</view>
+	</view>
+	<view class="card-group" style="padding-bottom: 34rpx;" wx:if="{{list[current].is_month_coupon==1||list[current].is_month_points==1}}">
+		<view class="card-title">每月领取</view>
+		<view class="card-subtitle">会员可每月领取优惠券、积分</view>
+		<view class="coupon-list left" wx:if="{{list[current].startbuy!=0}}">
+			<view class="coupon-list-item" wx:for="{{list[current].month_coupon}}" wx:for-item="ide" wx:key="key1">
+				<view class="circle-l"></view>
+				<view class="circle-r"></view>
+				<view class="coupon-inner">
+					<view class="price" wx:if="{{ide.backtype==0}}">￥<span>{{ide.deduct}}</span>
+					</view>
+					<view class="price" wx:if="{{ide.backtype==1}}">
+						<span>{{ide.discount}}</span>折</view>
+					<view class="price" wx:if="{{ide.backtype==2}}">
+						<span>返现</span>
+					</view>
+					<view class="explain">{{ide.title2}}</view>
+					<view class="condition">{{ide.use_limit}}</view>
+				</view>
+			</view>
+		</view>
+		<view class="coupon-list left" wx:if="{{list[current].startbuy==0}}">
+			<view class="coupon-list-item already" wx:for="{{list[current].month_coupon}}" wx:for-item="ide" wx:key="key2">
+				<view class="circle-l"></view>
+				<view class="circle-r"></view>
+				<view class="coupon-inner">
+					<view class="coupon-inner-media">
+						<view class="price" wx:if="{{ide.backtype==0}}">￥<span>{{ide.deduct}}</span>
+						</view>
+						<view class="price" wx:if="{{ide.backtype==1}}">
+							<span>{{ide.discount}}</span>折</view>
+						<view class="price" wx:if="{{ide.backtype==2}}">
+							<span>返现</span>
+						</view>
+						<view class="explain">
+							<view class="title">{{ide.use_limit}}</view>
+							<view class="subtitle">{{ide.title2}}</view>
+						</view>
+					</view>
+					<view class="condition">
+						<view bindtap="coupon" class="btn-condition {{ide.isget_month_coupon?'gary':''}}" data-couponid="{{ide.id}}"
+						 data-id="{{list[current].id}}" data-issend="{{ide.isget_month_coupon}}">{{ide.isget_month_coupon?'已领取':'立即领取'}}</view>
+					</view>
+				</view>
+			</view>
+		</view>
+		<view class="card-fiche golden" style="margin-top: 0;" wx:if="{{list[current].is_month_points==1}}">
+			<view class="fiche-icon">
+				<i class="icox icox-meiyuejifen"></i>
+			</view>
+			<view class="fiche-inner">
+				<view class="title">会员每月领取积分</view>
+				<view class="subtitle">{{list[current].month_points}}
+					<span>积分</span>
+				</view>
+			</view>
+			<view class="fiche-btn">
+				<view bindtap="credit" class="btn-submit border" data-id="{{list[current].id}}" data-iscredit="{{list[current].isget_month_point}}">{{list[current].startbuy==0?list[current].isget_month_point?'已领取':'立即领取':'每月领积分'}}</view>
+			</view>
+		</view>
+	</view>
+	<view class="card-group" wx:if="{{list[current].description!=''}}" style="display: none;">
+		<view class="card-title">使用说明</view>
+		<view class="card-explain" style="white-space: pre-line">{{list[current].description}}</view>
+	</view>
+</view>
+<view class="card-modal" wx:if="{{modal}}">
+	<view class="inner">
+		<view class="title">优惠券</view>
+		<view class="text">每月1号发放，需手动领取</view>
+		<view class="text">尊享会员每月可领取5张优惠券</view>
+		<view class="text">优惠券种类包括折扣券与满减券</view>
+		<view bindtap="submit" class="submit">确定</view>
+	</view>
+</view>
+
+
+
+<block wx:if="{{list[current].startbuy!=0&&list[current].startbuy!=-1}}" style="display: none;">
+	<view class="btn-footbar-bj {{isIpx?'iphonex':''}}" style="display: none;">
+		<view class="item"></view>
+		<view class="item"></view>
+	</view>
+	<view class="btn-footbar {{isIpx?'iphonex':''}}" style="display: none;">
+		<view class="btn-text">￥<span>{{list[current].price}}</span>/{{list[current].card_validate}}</view>
+		<view bindtap="submit" class="btn-submit" data-id="{{list[current].id}}" data-startbuy="{{list[current].startbuy}}">
+			<block wx:if="{{list[current].startbuy==1}}">立即开通</block>
+			<block wx:if="{{list[current].startbuy==2}}">重新购买</block>
+			<i class="icox icox-qianjin-copy"></i>
+		</view>
+	</view>
+</block>
+<view style="display: none;" bindtap="submit" class="renew {{isIpx?'iphonex':''}}" data-id="{{list[current].id}}"
+ data-startbuy="{{list[current].startbuy}}" wx:if="{{list[current].startbuy==0}}">续费</view>
+<view class="fui-toast {{FoxUIToast.show?'in':'out'}}">
+	<view class="text">{{FoxUIToast.text}}</view>
+</view>
+<view class="{{isIpx?'fui-iphonex-button':''}}"></view>
+<view class="fui-content-bottom" style="background-color: #fff;margin-top: 30rpx;">
+	<view class="fui-content-bottom-item fui-content-bottom-top to-flex buybtn" bindtap="submit" data-id="{{list[current].id}}"
+	 data-startbuy="{{list[current].startbuy}}">
+		<view class="fui-content-bottom-item-left " style="line-height: 80rpx">
+			<span style="color: #fffdff;margin-right: 10rpx;">￥{{list[current].price}}/年</span> <text style="color: #afd9d7;text-decoration: line-through;">原价 {{list[current].card_validate}}/年</text>
+		</view>
+		<view class="botton-line"></view>
+		<h2 style="color: #fff;">立即开通</h2>
+	</view>
+	<view class="fui-content-bottom-item fui-content-bottom-bottom to-flex">
+		<view class="fui-content-bottom-item-left " style="height: 80rpx;padding-left: 30rpx;font-size: 26rpx">
+			<view style="color: #afd9d7">累计消费￥699</view>
+			<view style="color: #fffdff">您已消费￥0.00</view>
+		</view>
+		<view class="botton-line"></view>
+		<h2 style="color: #fff;">自动开通</h2>
+	</view>
+</view>

@@ -1,0 +1,78 @@
+<!--pages/member/team/appointment/index.wxml-->
+<view class="content">
+	<view class="header-bar">
+		<block wx:for="{{headerBar}}" wx:key="index" >
+			<view class="{{navbarActiveIndex === index ? 'navbar-item-active' : ''}}" data-navbar-index="{{index}}" catchtap="onNavBarTap">{{item}}</view>
+		</block>
+	</view>
+	<block wx:if="{{navbarActiveIndex==0}}">
+		<form bindreset="formReset" bindsubmit="formSubmit" reportSubmit="true">
+			<view class="form-container">
+				<view class="people_num form-item">
+					<text class="form-container-title">人数:</text>
+					<input  class="m-input" name="people_sumpeople" placeholder="请填写人数" ></input>
+				</view>
+				<view class="people_time form-item">
+					<text class="form-container-title">时间:</text>
+					<input  class="b-input" name="people_begintime" placeholder="请填时间 如(2000-01-01)" ></input>
+					 
+				</view>
+				<view class="people_merchant form-item">
+					<text class="form-container-title">商家:</text>
+					<input  class="b-input" name="people_menu" placeholder="请填商家" ></input>
+				</view>
+				<view class="people_room form-item">
+					<text class="form-container-title">房间数:</text>
+					<input  class="m-input" name="people_content" placeholder="请填房间数" ></input>
+				</view>
+				<view class="people_people form-item">
+					<text class="form-container-title">联系人:</text>
+					<input  class="m-input" name="people_user" placeholder="请填联系人" ></input>
+				</view>
+				<view class="people_phone form-item">
+					<text class="form-container-title">电话:</text>
+					<input maxlength='11' class="b-input" name="people_mobile" placeholder="请填联系电话" ></input>
+				</view>
+			</view>
+			<view class="footer">
+			    <button  formType="submit" >提交预约</button>
+			</view>
+		</form>
+	</block>
+	<block wx:if="{{navbarActiveIndex==1}}">
+		<form bindreset="formReset" bindsubmit="formSubmit" reportSubmit="true">
+			<view class="form-container">
+				<view class="people_num form-item">
+					<text class="form-container-title">人数:</text>
+					<input  class="m-input" name="people_sumpeople" placeholder="请填写人数" ></input>
+				</view>
+				<view class="people_time form-item">
+					<text class="form-container-title">时间:</text>
+					<input  class="b-input" name="people_begintime" placeholder="请填时间 如(2000-01-01)" ></input>
+					 
+				</view>
+				<view class="people_merchant form-item">
+					<text class="form-container-title">商家:</text>
+					<input  class="b-input" name="people_menu" placeholder="请填商家" ></input>
+				</view>
+				<view class="people_room form-item">
+					
+					
+					<text class="form-container-title">菜品:</text>
+					<textarea name="people_greens" id=""  rows="10"style="border: 1px solid #898989;"></textarea>
+				</view>
+				<view class="people_people form-item">
+					<text class="form-container-title">联系人:</text>
+					<input  class="m-input" name="people_user" placeholder="请填联系人" ></input>
+				</view>
+				<view class="people_phone form-item">
+					<text class="form-container-title">电话:</text>
+					<input maxlength='11' class="b-input" name="people_mobile" placeholder="请填联系电话" ></input>
+				</view>
+			</view>
+			<view class="footer">
+			    <button  formType="submit" >提交预约</button>
+			</view>
+		</form>
+	</block>
+</view>

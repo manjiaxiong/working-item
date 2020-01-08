@@ -1,0 +1,58 @@
+<!--pages/refer/index.wxml-->
+<!--引入模板-->
+ <import src="./template/index/index.wxml"/>
+ <import src="./template/fencai/index.wxml"/>
+ <import src="./template/notice/index.wxml"/>
+ <import src="./template/serve/index.wxml"/>
+<view class="movie-container">
+  <!-- 导航栏 -->
+  <view class="navbar">
+    <block wx:for="{{navbarTitle}}" wx:key="index">
+      <view class="navbar-item {{navbarActiveIndex === index ? 'navbar-item-active' : ''}}" data-navbar-index="{{index}}" catchtap="onNavBarTap">
+        {{item}}
+      </view>
+    </block>
+  </view>
+ <!--内容部分-->
+
+</view>
+<view class="container">
+	<template is="indexCon" wx:if="{{navbarActiveIndex===0}}" data="{{indexdata,current,activeIndex}}" tapArticleItem="{{tapArticleItem}}" swiperChange="{{swiperChange}}" tapMusic="{{tapMusic}}"/>
+	<template is="fengcaiCon" wx:if="{{navbarActiveIndex===1}}" data="{{activeIndex,fencaiActiveIndex,Twodata}}" onFenBarTap="{{onFenBarTap}}" tapArticleItem="{{tapArticleItem}}" tapMusic="{{tapMusic}}"/>
+	<template is="serveCon" wx:if="{{navbarActiveIndex===2}}"  data="{{Threedata,selected,active,examTime}}"/>
+	<!-- <server  wx:if="{{navbarActiveIndex===2}}" id="server">	</server> -->
+	<template is="noticeCon" wx:if="{{navbarActiveIndex===3}}" data="{{Foredata,activeIndex}}" tapArticleItem="{{tapArticleItem}}" tapMusic="{{tapMusic}}" />
+ </view>
+ <!--音乐标签-->
+<audio src="{{musicSrc}}" action="{{action}}" bindtimeupdate="funtimeupdate"></audio>
+<view class="audio-close" id="myAudio" wx:if="{{isOpen==false}}" catchtap='changeAudioCon'>></view>
+<!-- <view class="audio-open to-flex" id="myAudio" wx:if="{{isOpen==true}}">
+	<view class="audio-open-left">
+		<view class="audio-open-left-top">
+			{{musicTitle}}
+		</view>
+		<view class="audio-open-left-bottom">
+			{{currentTime}}/{{allTime}}
+		</view>
+	</view>
+	<view class="audio-open-right" >
+		<image wx:if="{{isPlaying==true}}" catchtap='tapMusic' src="http://app.uhuoduo.com/attachment/app/ting.png"></image>
+		<image wx:if="{{isPlaying==false}}" catchtap='tapMusic' src="http://app.uhuoduo.com/attachment/app/fang1.png"></image>
+		<image src="http://app.uhuoduo.com/attachment/app/cuo.png" catchtap='changeAudioCon'></image>
+	</view>
+</view> -->
+<view class="audio-open to-flex" id="myAudio" wx:if="{{isOpen==true}}">
+	<view class="audio-open-left box">
+		<view class="audio-open-left-top animate">
+			{{musicTitle}}
+		</view>
+		<view class="audio-open-left-bottom ">
+			{{currentTime}}/{{allTime}}
+		</view>
+	</view>
+	<view class="audio-open-right" >
+		<image wx:if="{{isPlaying==true}}" catchtap='tapMusic' data-index="{{control}}" src="http://app.uhuoduo.com/attachment/app/zanting2.png"></image>
+		<image wx:if="{{isPlaying==false}}" catchtap='tapMusic' data-index="{{control}}" src="http://app.uhuoduo.com/attachment/app/656.png"></image>
+		<image src="http://app.uhuoduo.com/attachment/app/bfguanbi.png" catchtap='changeAudioCon'></image>
+	</view>
+</view>

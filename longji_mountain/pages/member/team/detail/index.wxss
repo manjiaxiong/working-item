@@ -1,0 +1,19 @@
+/* pages/member/team/detail/index.wxss */
+.content-title{
+	font-size: 32rpx;
+	font-weight: bolder;
+}
+.content-item-list{
+	padding-top:10rpx;
+	padding-bottom:20rpx;
+	border-bottom:1px dashed #ccc;
+}
+.content{
+	padding: 40rpx;
+	background-color: #fff;
+	 border-radius: 10rpx;
+	 box-shadow:0px 0px  10px 0px #ccc;
+}
+.content-item{
+	padding-left: 60rpx;
+}

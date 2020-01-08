@@ -1,0 +1,140 @@
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.container{
+			width: 90%;
+			margin-left: 5%;
+		}
+		body{
+			overflow: visible;
+		}
+		li|{
+			list-style: none;
+		}
+/*顶部开始*/
+	/*顶部导航开始*/
+		.header {
+			margin-top: 0.2rem;
+		}
+		.header .header-nav{
+			display: flex;
+			text-align: center;
+		}
+		.header .header-nav .iconfont{
+			margin-left: -0.5rem;
+			margin-top: 0.1rem;
+		}
+		.header .header-nav h2{
+			margin: 0 auto;
+			color: #333;
+		}
+	/*顶部搜索开始*/
+		.header-search{
+			/*width: 90%;*/
+			width: 100%;
+			/*margin-left: 5%;*/
+			margin-top: 0.5rem;
+			margin-bottom: 1.2rem;
+			position: relative;
+		}
+		.header-search .header-search-input {
+			width: 100%;
+			height: 30px;
+			outline: none;
+			border: none;
+			box-sizing: border-box;
+			border-radius: 15px;
+			padding-left: 1.3rem;
+			background-color: #eeeeee;
+		}
+		.header-search .header-search-del{
+			color: #aaabb3;
+			line-height: 30px;
+			position: absolute;
+			right: 0px;
+			top: 0px;
+			font-weight: 100;
+			font-size: 18px;
+		}
+		.header-search .header-search-con{
+			position: relative;
+			/*float: left;*/
+		}
+		.header-search .iconfont{
+			position: absolute;
+			font-weight: 600;
+			font-size: 20px;
+			left: 0.5rem;
+			color: #999;
+		}
+		.header-search .header-search-title{
+			position: absolute;
+			font-weight: 600;
+			left: 2rem;
+			top: 0px;
+			color: #666666;
+			line-height: 30px;
+		}
+	/*顶部当前城市开始*/
+		.header .now-city{
+			margin-bottom: 0.5rem;
+		}
+		.header .now-city p{
+			color: #333;
+		}
+		.header .now-city p span{
+			color: #604cea;
+			margin-left: 0.2rem;
+
+		}
+/*城市开始*/
+		.city{
+			width: 100%;
+			position: relative;
+		}
+		.city .city-nav-list {
+			width: 30%;
+			position: absolute;
+			left: 0;
+		}
+		.city .city-nav-list li{
+			width: 100%;
+			height: 2rem;
+			line-height: 2rem;
+			text-align: center;
+			background-color: #eee;
+		}
+		.city .city-nav-list .city-nav-list-now{
+			background-color: #fff;
+			border-left: 2px solid #604ceb;
+		}
+		.city .city-list-con{
+			width: 65%;
+			position: absolute;
+			right: 0;
+			margin-left: 5%;
+		}
+		.city .city-list-con ul{
+
+			display: flex;
+			justify-content: flex-start;
+			flex-wrap:wrap;
+		}
+		.city .city-list-con ul li{
+			width: 35%;
+			background-color: #eee;
+			margin-left: 10%;
+			list-style: none;
+			margin-top: 5%;
+			height: 1.5rem;
+			line-height: 1.5rem;
+			text-align: center;
+			border-radius: 0.75rem;
+			color: #666;
+			/*align-self:flex-start;*/
+		}
+		.city .city-list-con .city-list-con-now{
+			background-color: #604cea;
+			color: white;
+		}

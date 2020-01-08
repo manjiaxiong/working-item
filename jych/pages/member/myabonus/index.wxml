@@ -1,0 +1,64 @@
+<!--pages/member/myabonus/index.wxml-->
+
+<image src='{{set.regbg}}' style='width:100%;height:34.4%'></image>
+<!-- <view style='height:10rpx' class='liner'></view> -->
+<view class='top-refer iview'>
+  <text class='icon icon-lights'></text>
+  <text class='refer-t'> 如何成为加盟商</text>
+  <!-- <navigator class="refer-con " url="/pages/member/membercard/detail/index?card_id={{member_card_id}}">
+    ① 支付加盟费 <text class='blue-t'>{{level1.leimoney}}</text>元，即可成为<text class='blue-t'>【加盟商】 【立即开通】</text>
+  </navigator> -->
+  <view class="refer-con " bindtap="kaitong" >
+    ① 支付加盟费 <text class='blue-t'>{{level1.leimoney}}</text>元，即可成为<text class='blue-t'>【加盟商】 【立即开通】</text>
+  </view>
+  <view class='refer-con'>
+    ② 本店一次性消费 <text class='blue-t'>{{level1.leimoney}}</text>元，即可成为【<text class='blue-t'>{{shopname}}</text>】加盟商，您已消费<text class='blue-t'>{{moneycount}}</text>元，请继续努力吧！ </view>
+</view>
+
+<view class="fui-list-group">
+  <view class="fui-list">
+    <view class="fui-list-media "> <i class="icon icon-vip text-danger"></i> </view>
+    <view class="fui-list-inner">
+      <view class="subtitle">特权</view>
+    </view>
+  </view>
+  <view class="fui-list">
+    <view class="fui-list-media "> <i class="icon icon-qrcode text-default"></i> </view>
+    <view class="fui-list-inner">
+      <view class="subtitle">独立加盟店</view>
+      <view class="text">拥有自己的加盟店及推广二维码；</view>
+    </view>
+  </view>
+  <view class="fui-list">
+    <view class="fui-list-media "> <i class="icon icon-money text-danger"></i> </view>
+    <view class="fui-list-inner">
+      <view class="subtitle">销售拿分销奖</view>
+      <view class="text">成为加盟商后卖出商品，您可以获得分销奖励；</view>
+    </view>
+  </view>
+  <view class="fui-list">
+    <view class="fui-list-media "> <i class="icon icon-money text-danger"></i> </view>
+    <view class="fui-list-inner">
+      <view class="subtitle">推荐拿邀请奖</view>
+      <view class="text">邀请会员成为加盟商后，您可以获得邀请奖励； </view>
+    </view>
+  </view>
+</view>
+
+
+<!-- <navigator class='content'  openType="navigate" url="/pages/goods/index/index?cate={{item.id}}" wx:for="{{levelinfo}}" wx:for-index="idx" wx:key="key">
+  <view class='top-refer iview'>
+    <text class='icon icon-lights'></text>
+    <text class='refer-t'>{{item.levelname}}</text>
+   <image src='{{item.cate.advimg}}' class='conten-img'></image>
+    <view class='refer-con'>{{item.name}} </view>
+  </view>
+</navigator> -->
+
+  <!-- <view class='refer-con'>本店购买此系列商品可直接成为【<text class='blue-t'>{{shopname}}</text>】会员，请现在去购买吧！ </view> -->
+
+
+ <view class='top-refer iview'>
+  <button bindtap="gobuy" class=""  url="/pages/goods/index/index">立即购买</button>
+ </view>
+

@@ -1,0 +1,52 @@
+<view class="policy"> 
+  <!-- <image src="{{url}}" class="img" mode="widthFix" bindtap="preview"  data-src="{{url}}"  data-urls="{{url}}"></image> -->
+  <!-- bindlongpress="saveImg" -->
+  <view class="policy-top">
+    <view class="policy-top-title">金银翠汇珠宝</view>
+    <view class="policy-top-subtitle">电子质保单</view>
+  </view>
+  <view class="policy-cont" style="background-image: url(https://jych.youhuoduo.cn/addons/ewei_shopv2/template/mobile/default/static/images/coupon/policy.png);">
+    <view class="policy-cont-top">
+      <view class=""> 姓名：{{data.realname}}	</view>
+      <view class=""> 手机：{{data.mobile}} </view>
+      <view class=""> 单号：{{data.ordersn}} </view>
+      <view class=""> 日期：{{data.pay_time}}	 </view>
+    </view>
+    <view class="policy-cont-bot">
+      <view class="policy-cont-bot-left">
+        <view class="list">编码: {{data.productsn}}</view>
+        <view class="list">证书号: </view>
+      </view>
+      <view class="policy-cont-bot-righ">
+        <view class="image">
+          <image src="{{data.thumb}}" alt=""></image>
+        </view>
+        <view class="detail">
+          <view class="name"> {{data.title}} </view>
+          <view class="price">{{data.realprice}}<text class="span">现价</text></view>
+          <view class="list">
+            <view class="div">标签价</view>
+            <view class="div" wx:if="{{data.stoneweight > 0}}">石重</view>
+            <view class="div">重量</view>
+          </view>
+          <view class="list">
+            <view class="div">{{data.og_price}} </view>
+            <view class="div" wx:if="{{data.stoneweight > 0}}">{{data.stoneweight}}</view>
+            <view class="div">{{data.weight}} </view>
+          </view>
+        </view>
+      </view>
+      <view class="heprice">合计：{{data.realprice}}</view>
+    </view>
+  </view>
+  <view class="policy-bot">
+    <view class="policy-bot-zhu">注意事项</view>
+    <view class="">1、本店所售商品均经国家法定机构检测合格，品质上乘，
+请放心选购。特此保证!如有质量争议，以省级以上具有法
+律效力的质检结果为准。</view>
+    <view class="">2、因工艺要求首饰的某些特殊部位采用了标示成色不符的
+材料属正常现象，如黄金、铂金手镯的接口、活页、弹簧
+扣、耳背、耳针的针与背采取900金制作。</view>
+    <!-- <view class="">3、本店所售商品均经国家法定检测合格，品质上乘，请放心购买。</view> -->
+  </view>
+</view>

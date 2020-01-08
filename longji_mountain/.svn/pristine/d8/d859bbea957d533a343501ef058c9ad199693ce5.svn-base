@@ -1,0 +1,172 @@
+// pages/member/team/appointment/index.js
+var t = getApp(),
+	e = t.requirejs("core");
+Page({
+
+	/**
+	 * 页面的初始数据
+	 */
+	data: {
+		headerBar: ['民宿', '餐饮'],
+		navbarActiveIndex: 0
+	},
+
+	/**
+	 * 生命周期函数--监听页面加载
+	 */
+	onLoad: function(options) {
+
+	},
+
+	formSubmit: function(t) { //表单
+	var data={};
+		//先检验是否填完
+		if (t.detail.value.people_sumpeople.trim() == '') {
+			wx.showToast({
+				title: '请填写人数',
+				icon: 'none'
+			})
+			return;
+		} else if (t.detail.value.people_begintime.trim() == '') {
+			wx.showToast({
+				title: '请填写时间',
+				icon: 'none'
+			})
+			return;
+		} else if (t.detail.value.people_menu.trim() == '') {
+			wx.showToast({
+				title: '请填写商家',
+				icon: 'none'
+			})
+			return;
+		} else if (t.detail.value.people_user.trim() == '') {
+			wx.showToast({
+				title: '请填写联系人',
+				icon: 'none'
+			})
+			return;
+		} else if (t.detail.value.people_mobile.trim() == '') {
+			wx.showToast({
+				title: '请填写联系电话',
+				icon: 'none'
+			})
+			return;
+		}
+		data.user= t.detail.value.people_user.trim();
+		data.sumpeople= t.detail.value.people_sumpeople.trim();
+		data.begintime= t.detail.value.people_begintime.trim();
+		data.menu= t.detail.value.people_menu.trim();
+		data.mobile= t.detail.value.people_mobile.trim();
+		console.log(data.begintime)
+		//判断是哪个类型
+		if (this.data.navbarActiveIndex == 0) {
+			if (t.detail.value.people_content.trim() == '') { //验证
+				wx.showToast({
+					title: '请填写房间数',
+					icon: 'none'
+				})
+				return;
+			}
+			data.content= t.detail.value.people_content.trim()
+			data.type=1;
+			e.post('service/subscribe/upsubscribe', {
+				data:data
+			}, function(res) {
+				console.log(res)
+				if (res.status == 0) {
+					wx.showToast({
+						title: res.result.message,
+						icon: 'none'
+					})
+				}
+				wx.navigateTo({
+				      url: '/pages/member/team/index',
+				    })
+			})
+		} else if (this.data.navbarActiveIndex == 1) {
+			if (t.detail.value.people_greens.trim() == '') {
+				wx.showToast({
+					title: '请填写菜品',
+					icon: 'none'
+				})
+				return;
+			}
+			data.content= t.detail.value.people_greens.trim()
+			data.type=2;
+			e.post('service/subscribe/upsubscribe', {
+				data:data
+			}, function(res) {
+				console.log(res)
+				if (res.status == 0) {
+					wx.showToast({
+						title: res.result.message,
+						icon: 'none'
+					})
+				}
+				wx.navigateTo({
+				      url: '/pages/member/team/index',
+				    })
+			})
+		}
+
+	},
+
+	/**
+	 * 生命周期函数--监听页面初次渲染完成
+	 */
+	onReady: function() {
+
+	},
+
+	/**
+	 * 生命周期函数--监听页面显示
+	 */
+	onShow: function() {
+
+	},
+
+	/**
+	 * 生命周期函数--监听页面隐藏
+	 */
+	onHide: function() {
+
+	},
+
+	/**
+	 * 生命周期函数--监听页面卸载
+	 */
+	onUnload: function() {
+
+	},
+
+	/**
+	 * 页面相关事件处理函数--监听用户下拉动作
+	 */
+	onPullDownRefresh: function() {
+
+	},
+
+	/**
+	 * 页面上拉触底事件的处理函数
+	 */
+	onReachBottom: function() {
+
+	},
+
+	/**
+	 * 用户点击右上角分享
+	 */
+	onShareAppMessage: function() {
+
+	},
+	onNavBarTap: function(event) { //顶部选项卡事件
+		// 获取点击的navbar的index
+		let navbarTapIndex = event.currentTarget.dataset.navbarIndex
+		// 设置data属性中的navbarActiveIndex为当前点击的navbar
+
+		this.setData({
+			navbarActiveIndex: navbarTapIndex
+		})
+
+	}
+})

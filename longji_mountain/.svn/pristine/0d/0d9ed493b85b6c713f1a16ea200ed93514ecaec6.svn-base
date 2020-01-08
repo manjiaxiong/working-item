@@ -1,0 +1,20 @@
+<template name="noticeCon">
+	<block wx:for="{{Foredata.list}}" wx:for-item="item" wx:key="index">
+		<view class="m-list-con">
+			<view class="m-list-item " catchtap="tapArticleItem" data-ins="1">
+				<view class="m-list-item-title">
+					<text class="m-list-item-title-green">{{item.maintitle}} ｜ </text>{{item.title}}
+				</view>
+				<view class="m-list-item-detail to-flex">
+					<view class="m-list-item-detail-left"><text>{{item.author}}</text> | <text>{{item.createtime}}</text> <text>{{item.allshitime}}</text></view>
+					<view class="m-list-item-detail-right" wx:if="{{item.audiourl&&activeIndex!=index}}" catchtap='tapMusic' data-imusic="{{item.audiourl}}">
+						<image src="http://app.uhuoduo.com/attachment/app/bofang.png" alt="" /> 播放
+					</view>
+					<view class="m-list-item-detail-right" wx:if="{{item.audiourl&&activeIndex==index}}" catchtap='tapMusic' data-imusic="{{item.audiourl}}">
+						<image src="http://app.uhuoduo.com/attachment/app/zanting.png" alt="" /> 暂停
+					</view>
+				</view>
+			</view>
+		</view>
+	</block>
+</template>

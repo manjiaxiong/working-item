@@ -1,0 +1,6 @@
+{
+  "usingComponents": {},
+  "usingComponents": {
+     "server": "./components/server/index" 
+  }
+}

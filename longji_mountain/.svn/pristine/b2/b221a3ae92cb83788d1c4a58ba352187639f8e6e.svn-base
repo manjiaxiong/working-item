@@ -1,0 +1,13 @@
+ <import src="./template/homestay/index.wxml"/>
+ <import src="./template/catering/index.wxml"/>
+<view class="content">
+	<view class="header-bar">
+		<block wx:for="{{headerBar}}" wx:key="index" >
+			<view class="{{navbarActiveIndex === index ? 'navbar-item-active' : ''}}" data-navbar-index="{{index}}" catchtap="onNavBarTap">{{item}}</view>
+		</block>
+	</view>
+	<view class="content-con">
+		<template wx:if="{{navbarActiveIndex===0}}" is="homeCon" data="{{homestay}}" gosubmit="gosubmit"></template>
+		<template wx:if="{{navbarActiveIndex===1}}" is="caterCon" data="{{catering}}" gosubmit="gosubmit"></template>
+	</view>
+</view>

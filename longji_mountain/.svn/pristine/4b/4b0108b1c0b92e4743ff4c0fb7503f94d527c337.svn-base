@@ -1,0 +1,28 @@
+<template name="serveCon">
+	<view class="serve-con">
+		<block wx:for='{{examTime}}' wx:for-item="item" wx:key="index">
+			<view class="serve-item w90">
+				<view class="serve-item-top">
+					<view class="serve-item-top-left">
+						<image src="/static/images/img/tx4.png" alt=''></image>
+					</view>
+					<view class="serve-item-top-right"  >
+						<view class="serve-item-top-right-top to-flex">
+							<text class="serve-name">{{item.name}}</text><text class="serve-time">{{item.time}}</text>
+						</view>
+						<view class="serve-item-top-right-top-bottom to-flex">
+							<text>龙脊山人文小镇负责人</text>
+							<image wx:if="{{item.serverActiv==true}}" src="/static/images/img/shouqi1.png" alt="" data-index="{{index}}" bind:tap="show"></image>
+						</view>
+					</view>
+				</view>
+				<view class="serve-item-bottom {{selected[index] ? '' : 'hidden'}}">
+					<view class="serve-item-bottom-item">办公室：鹤壁市钜桥镇乡镇府2楼人口与计划部</view>
+					<view class="serve-item-bottom-item to-flex">办公室电话 15333999612 <image src="/static/images/img/shouqi2.png" data-index="{{index}}" alt="" bind:tap="show"></image></view>
+				</view>
+			</view>
+		</block>
+		
+	</view>
+	
+</template>

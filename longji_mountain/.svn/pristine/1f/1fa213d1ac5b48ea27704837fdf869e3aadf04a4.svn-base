@@ -1,0 +1,6 @@
+<view class="detail-con">
+	<view class="detail-titile">这是个标题</view>
+	<view class="detail-time">
+		2019-11-21
+	</view>
+</view>

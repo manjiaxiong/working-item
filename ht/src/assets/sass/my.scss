@@ -1,0 +1,51 @@
+.liCard5 {
+    width: 300px;
+    border: 1px solid #666;
+    margin: 10px;
+    transition: all 0.5s linear;
+    &:hover {
+      box-shadow: 5px 5px 10px #999;
+    }
+  
+    //   padding-right: ;
+    dl {
+      // padding: 5px;
+      dd {
+        span {
+          flex: 1;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+        }
+        display: flex;
+        justify-content: space-between;
+        margin: 10px;
+        min-height: 10px;
+        line-height: 10px;
+      }
+    }
+    .title {
+      font-size: 20px;
+      height: 30px;
+      line-clamp: 30px;
+      padding-left: 5px;
+      border-bottom: 1px solid #999;
+    }
+    span {
+      font-size: 14px;
+      &:nth-of-type(2) {
+        color: rgb(115, 63, 146);
+      }
+      &:last-child {
+        color: rgb(38, 158, 221);
+      }
+    }
+  
+    .el-icon-top {
+      color: rgb(38, 158, 221);
+    }
+    .smallImg {
+      width: 20px;
+      height: 20px;
+    }
+  }

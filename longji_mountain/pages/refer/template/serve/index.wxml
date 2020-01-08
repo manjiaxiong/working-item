@@ -1,0 +1,28 @@
+<template name="serveCon">
+	<view class="serve-con">
+		<block wx:for='{{Threedata.list}}' wx:for-item="item" wx:key="index">
+			<view class="serve-item w90">
+				<view class="serve-item-top">
+					<view class="serve-item-top-left">
+						<image src="{{item.thumb}}" alt=''></image>
+					</view>
+					<view class="serve-item-top-right"  >
+						<view class="serve-item-top-right-top to-flex">
+							<text class="serve-name">{{item.realname}}</text><text class="serve-time">{{item.createtime}}</text>
+						</view>
+						<view class="serve-item-top-right-top-bottom to-flex" data-index="{{index}}" bind:tap="show">
+							<text>{{item.title}}</text>
+							<image wx:if="{{item.serverActiv==true}}" src="http://app.uhuoduo.com/attachment/app/shouqi1.png" alt="" ></image>
+						</view>
+					</view>
+				</view>
+				<view class="serve-item-bottom {{selected[index] ? '' : 'hidden'}}" data-index="{{index}}" alt="" bind:tap="show">
+					<view class="serve-item-bottom-item">办公室：{{item.address}}</view>
+					<view class="serve-item-bottom-item to-flex">办公室电话 {{item.phone}} <image src="http://app.uhuoduo.com/attachment/app/shouqi2.png" ></image></view>
+				</view>
+			</view>
+		</block>
+		
+	</view>
+	
+</template>

@@ -1,0 +1,2 @@
+setCssToHead([".",[1],"all { width: 100%; height: 100%; }\nwx-uni-image { width: 100%; height: ",[0,6000],"; }\n",],undefined,{path:"./pages/service/service.wxss"})();
+document.dispatchEvent(new CustomEvent("generateFuncReady", { detail: { generateFunc: $gwx('./pages/service/service.wxml') } }));

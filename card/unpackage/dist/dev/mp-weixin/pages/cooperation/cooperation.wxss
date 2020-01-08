@@ -1,0 +1,27 @@
+
+.display_column,
+.display_row {
+	-webkit-box-align: stretch !important;
+	-webkit-align-items: stretch !important;
+	    -ms-flex-align: stretch !important;
+	        align-items: stretch !important;
+}
+.all {
+	width: 100%;
+	letter-spacing: 4rpx;
+}
+.t_1 {
+	font-size: 44rpx;
+	padding: 40rpx;
+}
+.t_2 {
+	font-size: 36rpx;
+	padding: 20rpx;
+}
+.t_3 {
+	padding: 40rpx;
+}
+.middle {
+	padding: 40rpx;
+}
+

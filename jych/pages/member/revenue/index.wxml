@@ -1,0 +1,193 @@
+<loading wx:if="{{!show}}">加载中...</loading>
+<view class="page commission" wx:if="{{show}}">
+    <view class="user-info">
+         <view class="userblock">
+            <view class="userblock-con">
+                
+                <view class="title">佣金总额(元)</view>
+                <view class="num" style="color: #fff;font-size:40rpx">{{allyongjin}}</view>
+            </view>
+            <view class="userblock-con">
+                <view class="text">
+                   
+                    <view class="title" >可提现金额(元)</view>
+                     <view class="num" style='font-size:40rpx;te'>{{member.yongjin}}</view>
+                </view>
+                <!-- <navigator class="btn btn-warning pull-right {{member['commission_ok']==0?' disabled':''}}" hoverClass="none" openType="navigate" url="{{member['commission_ok']==0?'':'./withdraw/index'}}">{{set['texts']['commission']}}{{set['texts']['withdraw']}}</navigator> -->
+            </view>
+        </view>
+        <view class="fui-list">
+            <view class='top top1'>
+              
+                <view class='top-con'>
+                  <text>分销收益（元）</text>
+                  <text>{{fenxiao}}</text>
+                </view>
+              
+               <!-- <view class='top-con'>
+                <text>管理收益（元）</text>
+                <text>{{jicha}}</text>
+              </view>
+               <view class='top-con'>
+                <text>平级收益（元）</text>
+                <text>{{ping}}</text>
+              </view> -->
+
+              <view class='top-con'>
+                <text>推荐收益（元）</text>
+                <text>{{tuijin}}</text>
+              </view>
+
+            </view>
+             <view class='top top1'>
+              <view class='top-con'>
+                <text>团队人数（人）</text>
+                <text>{{tnum}}</text>
+              </view>
+               <view class='top-con'>
+                <text>团队伞下业绩（元）</text>
+                <text>{{member.leiyeji}}</text>
+              </view>        
+            </view>
+            <!-- <view class="fui-list-media">
+                <image src="{{member['avatar']}}"></image>
+            </view>
+            <view class="fui-list-inner">
+                <view class="title">{{member['nickname']}}</view>
+                <view class="text">{{set['texts']['up']}}：{{agentname}}</view>
+                <view class="subtitle">{{levelname}}</view>
+            </view> -->
+        </view>
+    </view>
+    <view class="fui-cell-group" wx:if="{{set['hideicode']==0}}">
+        <view class="fui-cell">
+            <view class="fui-cell-icon">
+                <text class="icox icox-yaoqingma" style="color: #feb312;"></text>
+            </view>
+            <view class="fui-cell-text">我的{{set['texts']['icode']}}：{{member['id']}}</view>
+        </view>
+    </view>
+   <!--  <view class="userblock">
+        <view class="line total">
+            <view class="num">{{member['commission_pay']}}</view>
+            <view class="title">佣金总额(元)</view>
+        </view>
+        <view class="line able">
+            <view class="text">
+                <view class="num">{{member['commission_ok']}}</view>
+                <view class="title">{{set['texts']['commission_ok']}}({{set['texts']['yuan']}})</view>
+            </view>
+            <navigator class="btn btn-warning pull-right {{member['commission_ok']==0?' disabled':''}}" hoverClass="none" openType="navigate" url="{{member['commission_ok']==0?'':'./withdraw/index'}}">{{set['texts']['commission']}}{{set['texts']['withdraw']}}</navigator>
+        </view>
+    </view> -->
+    <view class="fui-block-group">
+        <navigator class="fui-block-child" url="./fenxiao?titleId=1&fenxiao={{member['fenxiao']}}">
+            <view class="icon" style="color: #ff4357;">
+                <i class="icon icon-qian"></i>
+            </view>
+            
+              <view class="text">
+                  <view class="title">分销奖励</view>
+                  <text>{{member['fenxiao']}}</text>
+                  笔
+              </view>
+        </navigator>
+        <!-- <navigator class="fui-block-child" url="./jicha?titleId=2&jicha={{member['jicha']}}">
+            <view class="icon" style="color: #9ec9f4;">
+                <i class="icon icon-shengfen"></i>
+            </view>
+            <view class="text">
+                <view class="title">管理奖励</view>
+                <text>{{member['jicha']}}</text>
+                笔
+            </view>
+        </navigator>
+        <navigator class="fui-block-child" url="./ping?titleId=3&ping={{member['ping']}}">
+            <view class="icon" style="color: #ffbe2e;">
+                <i class="icon icon-money"></i>
+            </view>
+            <view class="text">
+                <view class="title">平级奖励</view>
+                <text>{{member['ping']}}</text>
+                笔
+            </view>
+        </navigator> -->
+        
+       <navigator class="fui-block-child" url="./tuijian?titleId=4&ping={{member['tuijian']}}">
+            <view class="icon" style="color: #ffbe2e;">
+                <i class="icon icon-money"></i>
+            </view>
+            <view class="text">
+                <view class="title">推荐奖励</view>
+                <text>{{member['tuijian']}}</text>
+                笔
+            </view>
+        </navigator>
+
+        <navigator class="fui-block-child" url="./down/team">
+            <view class="icon" style="color: #ff6e02;">
+                <i class="icon icon-heilongjiangtubiao11"></i>
+            </view>
+            <view class="text">
+                <view class="title">我的团队</view>
+                <!-- <text>{{member['downcount']}}</text> -->
+                <!-- 人 -->
+            </view>
+        </navigator>
+
+        <navigator class="fui-block-child" url="/pages/zy/commission/myshop">
+            <view class="icon" style="color: #45c1c1;">
+                <i class="icon icon-dianpu1"></i>
+            </view>
+            <view class="text">
+                <view class="title">我的小店</view>
+                <!-- <text>{{member['downcount']}}</text> -->
+                <!-- 人 -->
+            </view>
+        </navigator>
+
+        <navigator class="fui-block-child" url="/pages/zy/commission/shopset">
+            <view class="icon" style="color: #45c1c1;">
+                <i class="icon icon-shezhi"></i>
+            </view>
+            <view class="text">
+                <view class="title">小店设置</view>
+                <!-- <text>{{member['downcount']}}</text> -->
+                <!-- 人 -->
+            </view>
+        </navigator>
+
+
+        <navigator class="fui-block-child" open-type="navigate" url="/pages/member/log/index" role="navigation">
+            <view class="icon" style="color: #ff6e02;">
+                <i class="icon icon-tixian1"></i>
+            </view>
+            <view class="text">
+                <view class="title">资金明细</view>
+                <!-- <text>{{member['kaituo']}}笔</text> -->
+                
+            </view>
+        </navigator>
+    </view>
+    <navigator class="fui-cell-group" url="/dividend/pages/index/index" wx:if="{{set.commissionshow==1}}">
+        <view class="fui-cell">
+            <view class="fui-cell-icon">
+                <text class="icox {{set.postercount>0?'icox-zhuyi':'icox-erweima1'}}" style="color: #feb312;"></text>
+            </view>
+            <view class="fui-cell-text">分红中心</view>
+            <view class="fui-cell-remark" style="font-size: 20rpx;"></view>
+        </view>
+    </navigator>
+    <navigator class="fui-cell-group" url="{{set.postercount>0?'./poster/index':'./qrcode/index'}}" wx:if="{{set.closed_qrcode==0||set.postercount>0}}">
+        <view class="fui-cell">
+            <view class="fui-cell-icon">
+                <text class="icox {{set.postercount>0?'icox-zhuyi':'icox-erweima1'}}" style="color: #feb312;"></text>
+            </view>
+            <view class="fui-cell-text">{{set.postercount>0?'邀请您的好友':'推广二维码'}}</view>
+            <view class="fui-cell-remark" style="font-size: 20rpx;"></view>
+        </view>
+    </navigator>
+</view>
+<navigator class="commission-shouye" openType="switchTab" url="/pages/index/index">
+    <text class="icox icox-shouye"></text>
+</navigator>

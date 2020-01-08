@@ -1,0 +1,136 @@
+/* pages/refer/index.wxss */
+/*引入css*/
+@import "./template/index/index.wxss"
+@import "./template/fencai/index.wxss"
+@import "./template/notice/index.wxss"
+@import "./template/serve/index.wxss"
+/*
+	共通属性
+*/
+.to-flex{
+	display: flex;
+	justify-content: space-between;
+}
+.w90{
+	width: 90%;
+	margin-left: 5%;
+}
+.p90{
+	padding: 0 5%;
+}
+.top-nav {
+	height: 84rpx;
+	line-height: 80rpx;
+}
+.top-nav .top-nav-item{
+	color: #595959;
+	font-size: 30rpx;
+}
+
+
+.container{
+	margin-top: ;
+	margin-top: 94rpx;
+}
+/*顶部导航*/
+.navbar{
+  display: flex;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 500;
+  width: 100%;
+  height: 50px;
+  /* flex-direction: row; */
+  text-align: right;
+  color: #656565;
+  font-size: 30rpx;
+  /* margin-left: 5%; */
+  box-sizing: border-box;
+  background-color: #FFF;
+  display: flex;
+  justify-content: space-between;
+}
+.navbar-item{
+  flex: 1;
+  padding: 26rpx 0px;
+  position: relative;
+  text-align: center;
+  margin-left: -54rpx;
+}
+.navbar-item-active{
+  /* transition: all 0.3s;
+  border-bottom: 10rpx solid #49bdcc; */
+  color: #49bdcc;
+}
+.navbar-item-active:after{
+	position: absolute;
+	content: '';
+	top: 80rpx;
+	width: 50rpx;
+	height: 4rpx;
+	left: 50%;
+	margin-left: -25rpx;
+	background-color: #49bdcc;
+}
+/*音频控件样式*/
+.audio-close{
+	position: fixed;
+	left: 0;
+	top: 50%;
+	width: 50rpx;
+	height: 96rpx;
+	border-top-right-radius: 10rpx;
+	border-bottom-right-radius: 10rpx;
+	margin-top: -48rpx  ;
+	line-height: 96rpx;
+	color: #e0e0e0;
+	text-align: center;
+	font-size: 32rpx;
+	background:linear-gradient(to right,#343434,#535353);
+}
+.audio-open{
+	position: fixed;
+	left: 10rpx;
+	top: 50%;
+	height: 96rpx;
+	border-top-right-radius: 10rpx;
+	border-bottom-right-radius: 10rpx;
+	margin-top: -55rpx  ;
+	color: #e0e0e0;
+	font-size: 32rpx;
+	background:linear-gradient(to right,#343434,#535353);
+	border-radius: 6rpx;
+	padding: 10rpx;
+	width: 400rpx;
+}
+.audio-open-left{
+	width: 300rpx;
+}
+.audio-open-left-top{
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+	font-size: 28rpx;
+}
+.audio-open-left-bottom{
+	font-size: 22rpx;
+}
+.audio-open-right{
+	margin-top: 25rpx;
+	position:relative;
+	z-index:999;
+}
+.audio-open image:first-child{
+	width: 40rpx;
+	height: 40rpx;
+	margin-right: 20rpx;
+}
+.audio-open image:last-child{
+	width: 35rpx;
+	height: 35rpx;
+}
+.container1 {height: 100%;display: flex;flex-direction: column;justify-content: space-between;box-sizing: border-box;color:#fff}
+.scrolltxt{}
+.marquee_box {position:relative;color:#fff;height:35rpx;display:block;overflow:hidden;} 
+.marquee_text {white-space: nowrap;position:absolute;top:0;font-size:14px;height:35rpx;line-height:35rpx;}
