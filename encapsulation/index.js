@@ -13,6 +13,10 @@
         </div>
 */
 //返回上一页并刷新onclick="self.location=document.referrer;"
+//特定区域除外
+var o = e.target;
+if($(o).closest('.welfareBox').length==0) { // 不是特定区域
+}
 //顶部滑动导航
  $(function () {
         var swiper = new Swiper('.swiper-container', {
