@@ -9,6 +9,10 @@
   -webkit-box-orient: vertical;
 
 */
+/*自动换行
+    white-space: pre-wrap;
+    word-wrap:break-word;/*英文*/
+*/
 /*加载*/
 <div class='infinite-loading'><span class='fui-preloader'></span><span class='text'> 正在加载...</span></div>
  /*
@@ -57,6 +61,25 @@
         }
 
 */
+/*旋转180**/
+@keyframes tea_arrow {
+    0%{transform: rotateZ(180deg);}
+    25%{transform: rotateZ(135deg);}
+    50%{transform: rotateZ(90deg);}
+    75%{transform: rotateZ(45deg);}
+    100%{transform: rotateZ(0deg);}
+}
+@keyframes tea_arrow1 {
+    0%{transform: rotateZ(0deg);}
+    25%{transform: rotateZ(45deg);}
+    50%{transform: rotateZ(90deg);}
+    75%{transform: rotateZ(135deg);}
+    100%{transform: rotateZ(180deg);}
+}
+
+.tea_arrowDown{animation: tea_arrow 0.5s linear;transform-origin:center center;transform: rotateZ(0deg);}
+.tea_arrowUp{animation: tea_arrow1 0.5s linear;transform-origin:center center;transform: rotateZ(180deg);}
+
    .top-tabbar::-webkit-scrollbar {/*去掉滚轮*/
     background-color: transparent;
     content: '';
@@ -99,6 +122,7 @@
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    word-wrap: break-word;
 }
  /*限制多行显示*/
 
